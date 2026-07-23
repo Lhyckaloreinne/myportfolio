@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-dm-sans), Arial, Helvetica, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --color-background: #f8f7f4;
+  --color-foreground: #1c1c1c;
+  --color-muted: #6f6f6a;
+  --color-border: #deddd8;
+  --color-surface: #ffffff;
+}
+
 :root {
   --background: #f8f7f4;
   --foreground: #1c1c1c;

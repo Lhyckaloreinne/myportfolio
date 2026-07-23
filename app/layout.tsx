@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, Playfair_Display } from "next/font/google";
+import Navbar from "@/components/layout/navbar";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -25,7 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} ${playfairDisplay.variable}`}>
+      <body
+        className={`${dmSans.variable} ${playfairDisplay.variable} min-h-screen flex flex-col bg-background font-sans text-foreground antialiased`}
+      >
+        <Navbar />
         {children}
       </body>
     </html>
