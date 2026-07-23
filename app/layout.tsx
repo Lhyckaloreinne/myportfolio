@@ -1,5 +1,16 @@
 import type { Metadata } from "next";
+import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
+
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  subsets: ["latin"],
+});
+
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Lhycka Loreinne Sulit | Portfolio",
@@ -14,7 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${dmSans.variable} ${playfairDisplay.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
