@@ -399,6 +399,6 @@ These may be considered for future versions.
 
 # Revision History
 
-| Version | Date | Author | Summary |
-|----------|------|--------|---------|
-| 1.0 | 2026-07-16 | Lhycka Loreinne Sulit | Initial Product Requirements |
+| Version | Date       | Author                | Summary                      |
+| ------- | ---------- | --------------------- | ---------------------------- |
+| 1.0     | 2026-07-16 | Lhycka Loreinne Sulit | Initial Product Requirements |

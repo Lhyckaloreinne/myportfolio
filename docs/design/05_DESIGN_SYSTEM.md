@@ -258,6 +258,6 @@ These additions will be documented as the project grows.
 
 # Revision History
 
-| Version | Date | Author | Summary |
-|----------|------|--------|---------|
-| 1.0 | 2026-07-16 | Lhycka Loreinne Sulit | Initial Design System documentation |
+| Version | Date       | Author                | Summary                             |
+| ------- | ---------- | --------------------- | ----------------------------------- |
+| 1.0     | 2026-07-16 | Lhycka Loreinne Sulit | Initial Design System documentation |

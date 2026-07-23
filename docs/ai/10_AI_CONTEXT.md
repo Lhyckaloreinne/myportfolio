@@ -245,6 +245,6 @@ All future improvements should support these long-term objectives while preservi
 
 # Revision History
 
-| Version | Date | Author | Summary |
-|----------|------|--------|---------|
-| 1.0 | 2026-07-16 | Lhycka Loreinne Sulit | Initial AI context and collaboration guide. |
+| Version | Date       | Author                | Summary                                     |
+| ------- | ---------- | --------------------- | ------------------------------------------- |
+| 1.0     | 2026-07-16 | Lhycka Loreinne Sulit | Initial AI context and collaboration guide. |

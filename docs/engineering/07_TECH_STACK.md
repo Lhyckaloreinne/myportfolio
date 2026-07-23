@@ -12,21 +12,21 @@ Rather than choosing technologies because they are popular, every decision shoul
 
 # Technology Stack Overview
 
-| Category | Technology |
-|----------|------------|
-| Framework | Next.js 15 (App Router) |
-| UI Library | React 19 |
-| Programming Language | TypeScript |
-| Styling | Tailwind CSS |
-| UI Components | shadcn/ui |
-| Animation | Framer Motion |
-| Icons | Lucide React |
-| Code Quality | ESLint |
-| Code Formatter | Prettier |
-| Package Manager | npm |
-| Version Control | Git & GitHub |
-| IDE | Visual Studio Code |
-| Deployment | Vercel |
+| Category             | Technology              |
+| -------------------- | ----------------------- |
+| Framework            | Next.js 15 (App Router) |
+| UI Library           | React 19                |
+| Programming Language | TypeScript              |
+| Styling              | Tailwind CSS            |
+| UI Components        | shadcn/ui               |
+| Animation            | Framer Motion           |
+| Icons                | Lucide React            |
+| Code Quality         | ESLint                  |
+| Code Formatter       | Prettier                |
+| Package Manager      | npm                     |
+| Version Control      | Git & GitHub            |
+| IDE                  | Visual Studio Code      |
+| Deployment           | Vercel                  |
 
 ---
 
@@ -273,6 +273,6 @@ Future technologies should support the project's goals without introducing unnec
 
 # Revision History
 
-| Version | Date | Author | Summary |
-|----------|------|--------|---------|
-| 2.0 | 2026-07-16 | Lhycka Loreinne Sulit | Updated technology stack to use Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, Framer Motion, and modern engineering conventions. |
+| Version | Date       | Author                | Summary                                                                                                                                 |
+| ------- | ---------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| 2.0     | 2026-07-16 | Lhycka Loreinne Sulit | Updated technology stack to use Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, Framer Motion, and modern engineering conventions. |

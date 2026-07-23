@@ -223,6 +223,6 @@ The goal is not to imitate these references but to apply the principles that mak
 
 # Revision History
 
-| Version | Date | Author | Summary |
-|----------|------|--------|---------|
-| 1.0 | 2026-07-16 | Lhycka Loreinne Sulit | Initial Brand Guidelines |
+| Version | Date       | Author                | Summary                  |
+| ------- | ---------- | --------------------- | ------------------------ |
+| 1.0     | 2026-07-16 | Lhycka Loreinne Sulit | Initial Brand Guidelines |

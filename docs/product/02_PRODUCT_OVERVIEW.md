@@ -123,10 +123,10 @@ The first version of the platform includes:
 - Homepage
 - About Me
 - Four role-focused specialization experiences
-    - UI/UX Design & Front-End Development
-    - Data Analytics
-    - Graphic Design
-    - Executive Support & Digital Operations
+  - UI/UX Design & Front-End Development
+  - Data Analytics
+  - Graphic Design
+  - Executive Support & Digital Operations
 - Featured Projects
 - Individual Project Pages
 - Skills & Tools

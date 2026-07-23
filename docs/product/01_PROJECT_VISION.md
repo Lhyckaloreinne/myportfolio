@@ -182,6 +182,6 @@ The primary objective is to create a focused, professional, scalable, and recrui
 
 # Revision History
 
-| Version | Date | Author | Summary |
-|----------|------|--------|---------|
-| 1.0 | 2026-07-16 | Lhycka Loreinne Sulit | Initial Project Vision |
+| Version | Date       | Author                | Summary                |
+| ------- | ---------- | --------------------- | ---------------------- |
+| 1.0     | 2026-07-16 | Lhycka Loreinne Sulit | Initial Project Vision |

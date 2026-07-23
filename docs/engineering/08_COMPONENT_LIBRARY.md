@@ -355,6 +355,6 @@ Future additions should support the existing design language and avoid unnecessa
 
 # Revision History
 
-| Version | Date | Author | Summary |
-|----------|------|--------|---------|
-| 1.0 | 2026-07-16 | Lhycka Loreinne Sulit | Initial UI Component Library documentation. |
+| Version | Date       | Author                | Summary                                     |
+| ------- | ---------- | --------------------- | ------------------------------------------- |
+| 1.0     | 2026-07-16 | Lhycka Loreinne Sulit | Initial UI Component Library documentation. |

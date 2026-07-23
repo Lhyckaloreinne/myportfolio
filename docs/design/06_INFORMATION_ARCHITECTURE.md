@@ -305,6 +305,6 @@ Every structural decision should support the following principles:
 
 # Revision History
 
-| Version | Date | Author | Summary |
-|----------|------|--------|---------|
-| 2.0 | 2026-07-16 | Lhycka Loreinne Sulit | Refined information architecture to support recruiter-specific journeys, role-focused specializations, and scalable portfolio growth. |
+| Version | Date       | Author                | Summary                                                                                                                               |
+| ------- | ---------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| 2.0     | 2026-07-16 | Lhycka Loreinne Sulit | Refined information architecture to support recruiter-specific journeys, role-focused specializations, and scalable portfolio growth. |

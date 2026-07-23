@@ -320,6 +320,6 @@ A development phase is considered complete when:
 
 # Revision History
 
-| Version | Date | Author | Summary |
-|----------|------|--------|---------|
-| 1.0 | 2026-07-16 | Lhycka Loreinne Sulit | Initial development roadmap and implementation phases. |
+| Version | Date       | Author                | Summary                                                |
+| ------- | ---------- | --------------------- | ------------------------------------------------------ |
+| 1.0     | 2026-07-16 | Lhycka Loreinne Sulit | Initial development roadmap and implementation phases. |
