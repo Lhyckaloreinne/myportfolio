@@ -1,13 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  ArrowUpRight,
-  Dribbble,
-  Github,
-  Linkedin,
-  Mail,
-} from "lucide-react";
+import { ArrowUpRight, Link2, Mail } from "lucide-react";
+import { SiBehance, SiGithub } from "react-icons/si";
 import SectionHeader from "@/components/ui/section-header";
 
 const contactLinks = [
@@ -21,19 +16,19 @@ const contactLinks = [
     label: "LinkedIn",
     value: "linkedin.com/in/your-profile",
     href: "https://www.linkedin.com/",
-    icon: Linkedin,
+    icon: Link2,
   },
   {
     label: "GitHub",
     value: "github.com/your-username",
     href: "https://github.com/",
-    icon: Github,
+    icon: SiGithub,
   },
   {
     label: "Behance",
     value: "behance.net/your-profile",
     href: "https://www.behance.net/",
-    icon: Dribbble,
+    icon: SiBehance,
   },
 ];
 
