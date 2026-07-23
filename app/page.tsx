@@ -1,13 +1,17 @@
 import HeroSection from "@/components/home/hero-section";
+import AboutSection from "@/components/home/about-section";
 import WhatIDoSection from "@/components/home/what-i-do-section";
 import FeaturedWorkSection from "@/components/home/featured-work-section";
+import SkillsSection from "@/components/home/skills-section";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <HeroSection />
+      <AboutSection />
       <WhatIDoSection />
       <FeaturedWorkSection />
+      <SkillsSection />
     </main>
   );
 }
