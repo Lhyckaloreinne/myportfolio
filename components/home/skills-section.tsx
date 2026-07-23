@@ -141,7 +141,7 @@ export default function SkillsSection() {
               >
                 <div className="flex items-start justify-between gap-6">
                   <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/70 bg-surface text-foreground">
-                    <Icon className="h-5 w-5" aria-hidden="true" />
+                    <Icon className="h-5 w-5" aria-hidden={true} />
                   </div>
                   <span className="text-[11px] font-semibold uppercase tracking-widest text-muted">
                     {group.number}
@@ -160,16 +160,16 @@ export default function SkillsSection() {
                     const SkillIcon = skill.icon;
 
                     return (
-                    <li
-                      key={skill.name}
-                      className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-surface px-3 py-1.5 text-xs font-medium text-foreground"
-                    >
-                      <SkillIcon
-                        className="h-3.5 w-3.5 shrink-0 text-muted"
-                        aria-hidden={true}
+                      <li
+                        key={skill.name}
+                        className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-surface px-3 py-1.5 text-xs font-medium text-foreground"
+                      >
+                        <SkillIcon
+                          className="h-3.5 w-3.5 shrink-0 text-muted"
+                          aria-hidden={true}
                         />
-                      <span>{skill.name}</span>
-                    </li>
+                        <span>{skill.name}</span>
+                      </li>
                     );
                   })}
                 </ul>

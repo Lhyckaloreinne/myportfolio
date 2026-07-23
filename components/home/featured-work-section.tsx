@@ -86,7 +86,7 @@ export default function FeaturedWorkSection() {
               className="group flex flex-col rounded-2xl border border-border/80 bg-surface/30 p-6 lg:p-10 transition-all duration-300 hover:border-foreground/40 hover:bg-surface/90 hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/20 lg:grid lg:grid-cols-12 lg:gap-12 lg:items-center"
             >
               {/* Left Side: Large Visual */}
-              <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-border/40 border border-border/60 lg:col-span-7">
+              <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-border/40 border border-border/60 lg:col-span-7">
                 <Image
                   src={mainProject.image}
                   alt={mainProject.imageAlt}
@@ -147,7 +147,7 @@ export default function FeaturedWorkSection() {
                 >
                   <div>
                     {/* Visual Area */}
-                    <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-border/40 border border-border/60 mb-6">
+                    <div className="relative aspect-16/10 w-full overflow-hidden rounded-xl bg-border/40 border border-border/60 mb-6">
                       <Image
                         src={project.image}
                         alt={project.imageAlt}

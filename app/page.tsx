@@ -3,6 +3,7 @@ import AboutSection from "@/components/home/about-section";
 import WhatIDoSection from "@/components/home/what-i-do-section";
 import FeaturedWorkSection from "@/components/home/featured-work-section";
 import SkillsSection from "@/components/home/skills-section";
+import EducationSection from "@/components/home/education-section";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <WhatIDoSection />
       <FeaturedWorkSection />
       <SkillsSection />
+      <EducationSection />
     </main>
   );
 }

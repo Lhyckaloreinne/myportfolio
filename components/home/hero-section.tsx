@@ -63,7 +63,7 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="w-full lg:col-span-5"
           >
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-2xl bg-border/40 border border-border/60 shadow-sm lg:max-w-none">
+            <div className="relative mx-auto aspect-4/5 w-full max-w-md overflow-hidden rounded-2xl bg-border/40 border border-border/60 shadow-sm lg:max-w-none">
               <Image
                 src="/images/lhycka_profile.JPG"
                 alt="Lhycka Loreinne Sulit - IT Graduate and Digital Professional"
