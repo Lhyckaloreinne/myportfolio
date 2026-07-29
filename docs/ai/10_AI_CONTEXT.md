@@ -63,8 +63,9 @@ The portfolio should feel:
 
 - Modern
 - Minimal
-- Editorial
 - Elegant
+- Warm
+- Refined
 - Professional
 - Intentional
 - Timeless
@@ -72,11 +73,13 @@ The portfolio should feel:
 Primary inspirations include:
 
 - Apple
-- Editorial magazine layouts
+- Premium personal portfolios
 - Marilag Official
 - Modern technology companies
 
-Avoid unnecessary visual clutter.
+Avoid the previous editorial/newspaper-like aesthetic and unnecessary visual clutter.
+
+Future AI-assisted changes should follow the updated design system rather than the earlier publication-style direction.
 
 Content should always remain the primary focus.
 

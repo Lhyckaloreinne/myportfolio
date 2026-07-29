@@ -104,11 +104,11 @@ Examples
 
 # Cards
 
-## Editorial Feature Card
+## Feature Panel
 
 Purpose
 
-Represent the four professional specializations on the homepage.
+Represent the four professional specializations on the homepage with a refined, imagery-forward layout.
 
 Examples
 
@@ -124,13 +124,19 @@ Contents
 - Description
 - CTA
 
+Guidance
+
+- Use minimal borders and subtle dividers rather than heavy cards.
+- Favor simple containers and strong typography.
+- Keep the presentation refined and understated.
+
 ---
 
 ## Project Card
 
 Purpose
 
-Display featured projects.
+Display featured projects with a refined, image-led preview.
 
 Contents
 
@@ -140,6 +146,12 @@ Contents
 - Description
 - Technologies
 - CTA
+
+Guidance
+
+- Use minimal cards or simple content panels.
+- Prioritize large imagery and clean typography.
+- Avoid heavy shadows and excessive rounded corners.
 
 ---
 

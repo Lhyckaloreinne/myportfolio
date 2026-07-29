@@ -12,20 +12,19 @@ The design system should guide both design and development, making the portfolio
 
 # Design Philosophy
 
-The Personal Career Platform should feel like a thoughtfully designed digital publication rather than a traditional résumé website.
+The Personal Career Platform should feel like a refined personal portfolio rather than a publication-style website.
 
-Inspired by modern editorial websites and premium technology brands, the experience should balance simplicity, professionalism, and creativity without unnecessary visual noise.
+Inspired by warm minimalism and premium digital experiences, the interface should balance sophistication, professionalism, and creativity without unnecessary visual noise.
 
 Every interface element should have a clear purpose. Every interaction should feel intentional. Every section should guide visitors naturally toward understanding my work and capabilities.
 
-The design should communicate confidence through clarity rather than decoration.
+The design should communicate confidence through restraint and clarity rather than decoration.
 
 The overall experience should feel:
 
 - Modern
 - Minimal
 - Elegant
-- Editorial
 - Professional
 - Intentional
 - Timeless
@@ -52,9 +51,9 @@ The interface exists to support the content, not compete with it.
 
 ---
 
-## Editorial Presentation
+## Visual Composition
 
-Layouts should feel curated, structured, and spacious, similar to a modern magazine.
+Layouts should feel curated, balanced, and spacious, with a focus on imagery and refined typography.
 
 Typography, whitespace, and composition should communicate professionalism and confidence.
 
@@ -100,24 +99,24 @@ Accessibility should be considered throughout the design process rather than add
 
 # Visual Style
 
-The visual identity should combine the simplicity of modern technology products with the elegance of editorial design.
+The visual identity should combine the simplicity of modern technology products with the warmth of a refined personal portfolio.
 
 Design Inspiration
 
 - Apple
 - Marilag Official
-- Editorial magazine layouts
-- Modern product portfolios
+- Premium digital portfolios
+- Modern personal brand experiences
 
 The overall interface should emphasize:
 
 - Large, readable typography
 - Generous whitespace
 - Clean layouts
-- Soft shadows
-- Rounded components
-- Neutral color palette
-- Carefully placed accent colors
+- Minimal borders
+- Thin subtle dividers
+- Neutral warm palette
+- Carefully placed accents
 
 The visual style should feel premium, calm, and intentional.
 
@@ -125,9 +124,11 @@ The visual style should feel premium, calm, and intentional.
 
 # Color Philosophy
 
-The interface should primarily rely on neutral tones to allow the work itself to become the visual focus.
+The interface should primarily rely on warm neutral tones to allow the work itself to become the visual focus.
 
 Accent colors should be used sparingly to highlight important actions and interactive elements.
+
+Key palette characteristics include warm ivory backgrounds, deep charcoal text, muted taupe secondary tones, and very subtle beige or champagne accents.
 
 Color should communicate hierarchy rather than decoration.
 
@@ -149,7 +150,7 @@ The design should use:
 - Consistent spacing
 - Minimal font variations
 
-The overall typography should resemble modern editorial publications.
+The overall typography should feel refined, modern, and purposeful.
 
 Specific font families and scales will be finalized during implementation.
 
@@ -163,7 +164,7 @@ Content should be organized into clearly defined sections with consistent spacin
 
 The platform should avoid clutter and prioritize readability.
 
-Every page should follow a predictable layout structure while remaining visually engaging.
+Every page should use refined proportions, generous whitespace, and imagery to support the content.
 
 ---
 
@@ -179,13 +180,15 @@ Components should be:
 - Responsive
 - Consistent
 
+Components should avoid excessive card-based styling and instead use simple containers, refined typography, and imagery where appropriate.
+
 Examples include:
 
 - Navigation Bar
 - Buttons
-- Cards
-- Project Cards
-- Gallery Cards
+- Project panels
+- Project previews
+- Gallery sections
 - Tags
 - Badges
 - Timeline

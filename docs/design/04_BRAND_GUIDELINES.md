@@ -57,9 +57,9 @@ These values should influence every product, design, and content decision.
 
 # 4. Design Philosophy
 
-The visual direction is inspired by editorial design and Apple's philosophy of simplicity, clarity, and intentionality.
+The visual direction is rooted in elegant simplicity, warm minimalism, and a refined personal portfolio aesthetic.
 
-The interface should feel like a premium publication rather than a traditional portfolio website.
+The interface should feel like a sophisticated portfolio rather than a literal publication or editorial layout.
 
 Content should always remain the focal point, supported by generous whitespace, balanced typography, and subtle visual details.
 
@@ -88,17 +88,20 @@ Instead of claiming expertise, the platform should demonstrate it through projec
 
 The interface should emphasize:
 
-- Editorial-inspired layouts
+- Elegant minimalist layouts
 - Elegant typography
 - Spacious composition
 - Strong visual hierarchy
+- Large, visually important imagery
 - Neutral color palette
-- One restrained accent color
-- Soft shadows
-- Thin borders
-- Rounded corners
+- Warm ivory and soft cream backgrounds
+- Deep charcoal primary text
+- Warm gray and muted taupe secondary text
+- Very subtle beige or champagne accents
+- Thin subtle dividers
+- Minimal borders
 - High-quality imagery
-- Purposeful micro-interactions
+- Purposeful, understated micro-interactions
 
 Animations should be subtle and enhance usability rather than attract attention.
 
@@ -106,15 +109,18 @@ Animations should be subtle and enhance usability rather than attract attention.
 
 # 7. Color Philosophy
 
-The visual identity should rely primarily on neutral colors to create a calm and timeless experience.
+The visual identity should rely primarily on warm neutral colors to create a calm and timeless experience.
 
 Preferred characteristics:
 
-- Warm white and off-white backgrounds
-- Soft gray tones
-- Charcoal text
-- Muted neutral surfaces
-- A single accent color used intentionally
+- Warm ivory and soft cream backgrounds
+- Soft gray and muted taupe tones
+- Deep charcoal or near-black primary text
+- Warm gray secondary text
+- Very subtle beige or champagne accents
+- Minimal, restrained use of accent color
+
+Avoid bright colors, strong gradients, heavy shadows, glassmorphism, and excessive gold.
 
 Color should guide attention, not dominate the interface.
 
@@ -132,7 +138,7 @@ The design should use typography to establish hierarchy, rhythm, and elegance th
 - Consistent font sizing
 - Balanced spacing between sections
 
-The interface should feel readable, refined, and editorial rather than heavily decorated.
+The interface should feel readable, refined, and modern rather than overly decorative.
 
 ---
 
@@ -213,9 +219,9 @@ If the answer is "no," reconsider the decision.
 The overall design language draws inspiration from:
 
 - Apple's philosophy of simplicity and intentionality
-- Editorial and magazine layouts
 - Premium digital publications
 - Modern product interfaces
+- Refined personal portfolio presentation
 
 The goal is not to imitate these references but to apply the principles that make them feel timeless, refined, and content-focused.
 
