@@ -48,7 +48,7 @@ export default function ContactSection() {
           />
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
@@ -64,7 +64,7 @@ export default function ContactSection() {
                     href={contact.href}
                     target={contact.href.startsWith("http") ? "_blank" : undefined}
                     rel={contact.href.startsWith("http") ? "noreferrer" : undefined}
-                    className={`group flex items-start justify-between gap-4 py-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30 focus-visible:ring-inset sm:px-5 lg:py-8 ${
+                    className={`group flex items-start justify-between gap-4 py-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/10 focus-visible:ring-inset sm:px-5 lg:py-8 ${
                       index % 2 === 0 ? "sm:border-r sm:border-border/70" : ""
                     } ${index < 2 ? "border-b border-border/70" : ""}`}
                   >

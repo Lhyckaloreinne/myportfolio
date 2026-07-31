@@ -39,26 +39,20 @@ export default function AboutSection() {
           />
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-7"
           >
-            <p className="max-w-2xl text-base leading-relaxed text-foreground sm:text-lg lg:text-xl">
-              I&apos;m an Information Technology graduate building a career at
-              the intersection of creative thinking, technology, data, and
-              organization. I enjoy turning ideas into clear digital
-              experiences and practical systems that help people work better.
+            <p className="max-w-2xl text-base leading-8 text-foreground sm:text-lg lg:text-xl">
+              I&apos;m an Information Technology graduate building a career at the intersection of creative thinking, technology, data, and organization. I enjoy turning ideas into clear digital experiences and practical systems that help people work better.
             </p>
-            <p className="mt-5 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
-              My work is guided by curiosity, thoughtful problem-solving, and
-              a belief that good outcomes come from both the final result and
-              the process behind it. This portfolio brings those interests
-              together in one evolving platform.
+            <p className="mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg">
+              My work is guided by curiosity, thoughtful problem-solving, and a belief that good outcomes come from both the final result and the process behind it. This portfolio brings those interests together in one evolving platform.
             </p>
 
-            <div className="mt-10 grid gap-6 border-t border-border/70 pt-6 sm:grid-cols-3 lg:mt-14">
+            <div className="mt-10 grid gap-6 sm:grid-cols-3">
               {principles.map((principle, index) => (
                 <motion.div
                   key={principle.number}
@@ -70,14 +64,15 @@ export default function AboutSection() {
                     delay: index * 0.08,
                     ease: [0.16, 1, 0.3, 1],
                   }}
+                  className="border-t border-border/70 pt-6"
                 >
-                  <span className="text-[11px] font-semibold uppercase tracking-widest text-muted">
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.35em] text-muted">
                     {principle.number}
                   </span>
-                  <h3 className="mt-3 font-serif text-lg font-bold tracking-tight text-foreground">
+                  <h3 className="mt-4 font-serif text-xl font-semibold tracking-tight text-foreground">
                     {principle.title}
                   </h3>
-                  <p className="mt-2 text-xs leading-relaxed text-muted sm:text-sm">
+                  <p className="mt-3 text-sm leading-7 text-muted">
                     {principle.description}
                   </p>
                 </motion.div>

@@ -24,21 +24,21 @@ export default function SectionHeader({
       } ${className}`}
     >
       {/* Label / Eyebrow */}
-      <div className="mb-3 inline-flex items-center gap-2">
-        <span className="h-px w-6 bg-foreground/30" />
-        <span className="text-xs font-semibold uppercase tracking-widest text-muted">
+      <div className="mb-4 inline-flex items-center gap-3">
+        <span className="h-px w-8 bg-foreground/20" />
+        <span className="text-[11px] font-semibold uppercase tracking-[0.4em] text-muted">
           {label}
         </span>
       </div>
 
       {/* Main Section Title */}
-      <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+      <h2 className="font-serif text-3xl font-semibold tracking-tight text-foreground sm:text-4xl lg:text-5xl xl:text-6xl">
         {title}
       </h2>
 
       {/* Supporting Description */}
       {description && (
-        <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg lg:text-xl max-w-2xl">
+        <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg lg:text-xl">
           {description}
         </p>
       )}

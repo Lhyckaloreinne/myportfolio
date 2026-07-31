@@ -64,7 +64,6 @@ export default function FeaturedWorkSection() {
   return (
     <section className="w-full py-16 md:py-24 lg:py-32 bg-background border-t border-border/60">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
-        {/* Section Header */}
         <SectionHeader
           label="FEATURED WORK"
           title="Selected projects and digital solutions."
@@ -72,9 +71,7 @@ export default function FeaturedWorkSection() {
           className="mb-12 lg:mb-16"
         />
 
-        {/* Editorial Layout */}
         <div className="flex flex-col gap-8 lg:gap-10">
-          {/* Main Large Featured Project (01 System Project) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -85,7 +82,6 @@ export default function FeaturedWorkSection() {
               href={mainProject.href}
               className="group flex flex-col rounded-2xl border border-border/80 bg-surface/30 p-6 lg:p-10 transition-all duration-300 hover:border-foreground/40 hover:bg-surface/90 hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/20 lg:grid lg:grid-cols-12 lg:gap-12 lg:items-center"
             >
-              {/* Left Side: Large Visual */}
               <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-border/40 border border-border/60 lg:col-span-7">
                 <Image
                   src={mainProject.image}
@@ -100,7 +96,6 @@ export default function FeaturedWorkSection() {
                 </div>
               </div>
 
-              {/* Right Side: Content */}
               <div className="mt-6 flex flex-col justify-between lg:mt-0 lg:col-span-5 lg:h-full lg:py-2">
                 <div>
                   <div className="text-[11px] font-semibold uppercase tracking-widest text-muted">
@@ -126,7 +121,6 @@ export default function FeaturedWorkSection() {
             </Link>
           </motion.div>
 
-          {/* Secondary 2-Column Supporting Projects (02 & 03) */}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-10">
             {secondaryProjects.map((project, index) => (
               <motion.div
@@ -146,7 +140,6 @@ export default function FeaturedWorkSection() {
                   className="group flex h-full flex-col justify-between rounded-2xl border border-border/80 bg-surface/30 p-6 transition-all duration-300 hover:border-foreground/40 hover:bg-surface/90 hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/20"
                 >
                   <div>
-                    {/* Visual Area */}
                     <div className="relative aspect-16/10 w-full overflow-hidden rounded-xl bg-border/40 border border-border/60 mb-6">
                       <Image
                         src={project.image}

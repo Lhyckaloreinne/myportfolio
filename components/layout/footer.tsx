@@ -30,17 +30,17 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border/70 bg-foreground text-background">
+    <footer className="border-t border-border/60 bg-background text-foreground">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-12 lg:py-16">
         <div className="grid gap-10 md:grid-cols-12 md:items-start md:gap-8 lg:gap-12">
           <div className="md:col-span-6">
             <Link
               href="/"
-              className="font-serif text-2xl font-bold tracking-tight transition-opacity hover:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background/50"
+              className="font-serif text-2xl font-semibold tracking-tight text-foreground transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/10"
             >
               Lhycka Loreinne
             </Link>
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-background/65">
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-muted">
               A multidisciplinary digital professional exploring thoughtful
               experiences, useful systems, and continuous learning.
             </p>
@@ -55,7 +55,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-background/75 transition-colors hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background/50"
+                    className="text-muted transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/10"
                   >
                     {link.label}
                   </Link>

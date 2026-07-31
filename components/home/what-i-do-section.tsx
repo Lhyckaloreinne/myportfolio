@@ -58,7 +58,6 @@ export default function WhatIDoSection() {
   return (
     <section className="w-full py-16 md:py-24 lg:py-32 bg-background border-t border-border/60">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
-        {/* Section Header */}
         <SectionHeader
           label="WHAT I DO"
           title="A multidisciplinary approach to digital work."
@@ -66,59 +65,47 @@ export default function WhatIDoSection() {
           className="mb-12 lg:mb-16"
         />
 
-        {/* 4 Cards in 1 Horizontal Row on Desktop */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+        <div className="grid gap-10 lg:grid-cols-2">
           {specializations.map((item, index) => (
             <motion.div
               key={item.number}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{
-                duration: 0.5,
+                duration: 0.55,
                 delay: index * 0.08,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="h-full"
+              className="group overflow-hidden rounded-[1.25rem] border border-border/70 bg-background p-6 transition duration-300 hover:border-foreground/40"
             >
-              <Link
-                href={item.href}
-                className="group flex h-full flex-col justify-between rounded-2xl border border-border/80 bg-surface/30 p-5 transition-all duration-300 hover:border-foreground/40 hover:bg-surface/90 hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/20"
-              >
-                <div>
-                  {/* Category Image Visual Area */}
-                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-border/40 border border-border/60 mb-5">
-                    <Image
-                      src={item.image}
-                      alt={item.imageAlt}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 300px"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute top-3 left-3 rounded-md bg-background/80 backdrop-blur-md px-2.5 py-1 text-[11px] font-semibold tracking-widest uppercase text-foreground border border-border/50">
-                      {item.number}
-                    </div>
-                  </div>
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[1rem] border border-border/70 bg-surface/80 mb-6">
+                <Image
+                  src={item.image}
+                  alt={item.imageAlt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 48vw, 420px"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
 
-                  {/* Title */}
-                  <h3 className="font-serif text-lg font-bold tracking-tight text-foreground transition-colors duration-300 group-hover:text-foreground lg:text-xl">
-                    {item.title}
-                  </h3>
+              <div className="flex items-center justify-between gap-4 text-[11px] font-semibold uppercase tracking-[0.35em] text-muted">
+                <span>{item.number}</span>
+                <span className="rounded-full border border-border/70 px-3 py-1 text-[10px] uppercase tracking-[0.35em] text-muted">
+                  {item.number}
+                </span>
+              </div>
+              <h3 className="mt-4 font-serif text-2xl font-semibold tracking-tight text-foreground lg:text-3xl">
+                {item.title}
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-muted">
+                {item.description}
+              </p>
 
-                  {/* Description */}
-                  <p className="mt-2.5 text-xs leading-relaxed text-muted transition-colors duration-300 group-hover:text-foreground/80 sm:text-sm">
-                    {item.description}
-                  </p>
-                </div>
-
-                {/* Footer Link / Explore Interaction */}
-                <div className="mt-6 pt-4 border-t border-border/60 flex items-center justify-between text-xs font-medium uppercase tracking-wider text-muted group-hover:text-foreground transition-colors">
-                  <span>Explore Specialization</span>
-                  <div className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-border/70 bg-background text-muted transition-all duration-300 group-hover:border-foreground group-hover:bg-foreground group-hover:text-background group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                    <ArrowUpRight className="h-3.5 w-3.5" />
-                  </div>
-                </div>
-              </Link>
+              <div className="mt-7 flex items-center justify-between border-t border-border/70 pt-5 text-xs font-semibold uppercase tracking-[0.3em] text-muted">
+                <span>Explore</span>
+                <ArrowUpRight className="h-4 w-4 text-muted transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              </div>
             </motion.div>
           ))}
         </div>
