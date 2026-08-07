@@ -2,17 +2,21 @@
 
 > **Purpose**
 >
-> This document defines the standard structure for every UI/UX case study in this portfolio.
+> This document defines the standard structure used for every UI/UX case study in this portfolio.
 >
-> Rather than creating unique structures for each project, every UI/UX project should provide its own project metadata while following this shared template.
+> Each project provides its own factual metadata, while this template defines how that information should be organized into a consistent case study.
 >
-> This ensures consistency across content, presentation, and future AI-assisted generation.
+> The metadata serves as the single source of truth, and this template transforms those facts into a cohesive narrative for presentation.
 
 ---
 
-# Case Study Flow
+# Case Study Philosophy
 
-Every UI/UX case study should follow the same storytelling structure:
+The purpose of a case study is not simply to showcase interface screens.
+
+A strong case study demonstrates how design decisions were used to solve real problems and improve the overall user experience.
+
+Every case study should naturally communicate:
 
 Business Context
 
@@ -26,27 +30,15 @@ Goals
 
 ↓
 
-Target Users
-
-↓
-
 Design Thinking
 
 ↓
 
-Information Architecture
+Solution
 
 ↓
 
-Visual Design
-
-↓
-
-Key Design Decisions
-
-↓
-
-Experience Walkthrough
+Experience
 
 ↓
 
@@ -56,9 +48,59 @@ Outcome
 
 Reflection
 
+Screens support the story.
+
+They should never replace it.
+
 ---
 
-# Standard Sections
+# Generation Workflow
+
+Every UI/UX case study follows the same workflow.
+
+Project Metadata
+
+↓
+
+Extract Project Facts
+
+↓
+
+Apply Case Study Template
+
+↓
+
+Generate Narrative
+
+↓
+
+Insert Supporting Screens
+
+↓
+
+Final Portfolio Case Study
+
+This ensures every project follows a consistent structure while remaining unique to its own context.
+
+---
+
+# Metadata Requirements
+
+Before generating a case study, always read the project's metadata.
+
+The metadata is the project's single source of truth.
+
+If information does not exist inside the metadata:
+
+- Do not invent it.
+- Do not exaggerate it.
+- Do not assume it.
+
+Use only documented project information.
+
+---
+
+# Standard Case Study Structure
 
 ## 1. Project Overview
 
@@ -70,13 +112,15 @@ Include:
 - Who it was created for
 - Its primary purpose
 
-This section should provide context before discussing the design process.
+This section establishes context before discussing the design process.
 
 ---
 
 ## 2. Project Information
 
-Every project should provide the following metadata.
+Present the project's key information.
+
+Typical metadata includes:
 
 | Item | Description |
 |------|-------------|
@@ -87,41 +131,38 @@ Every project should provide the following metadata.
 | Year | Project year |
 | Duration | Development duration |
 | Client | Client or organization |
-| Platform | Responsive Web, Mobile, Desktop |
-| Role | My responsibilities |
-| Tools | Design & development tools used |
+| Platform | Web, Mobile, Desktop |
+| Role | Primary responsibilities |
+| Team | Team size |
+| Tools | Design and development tools |
 
 ---
 
-## 3. My Role
+## 3. Business Context
 
-Describe only your actual contributions.
-
-Possible responsibilities include:
-
-- UI Design
-- UX Design
-- Front-End Development
-- Design System
-- Wireframing
-- Prototyping
-- Information Architecture
-- User Flow Design
-- Visual Design
-
-Do not exaggerate your involvement.
-
----
-
-## 4. The Challenge
+Provide background about the project.
 
 Explain:
 
 - Existing situation
-- Problems encountered
-- Why the project was necessary
+- Business environment
+- Why the project was initiated
 
-Remain factual and avoid unsupported claims.
+Focus on understanding the context before discussing the problem.
+
+---
+
+## 4. Problem Statement
+
+Clearly explain:
+
+- Existing pain points
+- Current limitations
+- Why improvement was necessary
+
+Remain factual.
+
+Avoid unsupported claims.
 
 ---
 
@@ -133,20 +174,20 @@ Separate goals into two groups.
 
 Examples:
 
-- Improve accessibility
+- Improve operational efficiency
+- Digitize manual workflows
 - Establish an online presence
-- Increase operational efficiency
 - Centralize information
 
 ### User Experience Goals
 
 Examples:
 
-- Improve navigation
-- Simplify workflows
+- Simplify navigation
 - Reduce user friction
 - Improve discoverability
-- Create intuitive interactions
+- Streamline workflows
+- Increase usability
 
 ---
 
@@ -160,149 +201,180 @@ Include:
 - User needs
 - Primary objectives
 
-Avoid fictional personas unless they were actually created during the project.
+Avoid fictional personas unless they actually existed during the project.
 
 ---
 
-## 7. Design Thinking
+## 7. My Role
 
-Document the reasoning behind the design.
+Describe only your actual contributions.
 
-Possible considerations:
+Possible responsibilities include:
+
+- UI Design
+- UX Design
+- Front-End Development
+- Design System
+- Wireframing
+- Prototyping
+- User Flow Design
+- Information Architecture
+- Visual Design
+
+Never exaggerate responsibilities.
+
+---
+
+## 8. Design Thinking
+
+Explain the reasoning behind the design.
+
+Possible considerations include:
 
 - Business requirements
 - Client requirements
-- Brand identity
 - Product characteristics
+- Brand identity
+- Accessibility
 - Technical limitations
-- Accessibility considerations
 
-If no formal UX research was conducted, clearly state that design decisions were based on business requirements and project objectives.
+If no formal UX research was conducted, clearly state that design decisions were guided by project requirements and objectives.
+
+Focus on *why* decisions were made rather than *what* was designed.
 
 ---
 
-## 8. Information Architecture
+## 9. Information Architecture
 
-Provide:
+Document how the experience is organized.
+
+Include:
 
 - Sitemap
 - Navigation hierarchy
-- User flow
+- Primary user flow
 
-Whenever possible, use simple diagrams.
+Simple diagrams are encouraged.
 
 ---
 
-## 9. Visual Design
+## 10. Visual Design
 
-Explain the visual direction.
+Explain the visual direction of the project.
 
-Possible topics:
+Possible topics include:
 
 - Color palette
 - Typography
-- Layout system
+- Layout
 - Spacing
-- Grid
-- Component consistency
 - Visual hierarchy
+- Components
 - Imagery
 - Accessibility
 
-Focus on *why* these decisions were made rather than simply describing the interface.
+Focus on design rationale rather than describing the interface.
 
 ---
 
-## 10. Key Design Decisions
+## 11. Key Design Decisions
 
-Document the project's most important UX decisions.
+Highlight the project's most significant UX decisions.
 
-Each decision should include:
+Aim for three to six decisions.
+
+For each decision include:
 
 ### Decision
 
-What changed?
+What was implemented?
 
 ### Reason
 
-Why was the decision made?
+Why was this decision made?
 
-### Impact
+### User Impact
 
 How did it improve the experience?
 
-Aim for three to six significant decisions.
+Prioritize design thinking over feature descriptions.
 
 ---
 
-## 11. Experience Walkthrough
+## 12. Experience Walkthrough
 
 Present the interface in the order users naturally experience it.
 
-Rather than explaining every UI element, focus on each screen's purpose and contribution to the overall user journey.
+Rather than describing every UI element, explain the purpose of each major screen and how it contributes to the overall journey.
 
 Organize screenshots into logical chapters.
 
 Example:
 
-### 01. Discover
+### Discover
 
 - Landing Page
 - Collections
 - Categories
-- Products
+- Search
 
-### 02. Purchase
+### Core Experience
 
+- Dashboard
 - Product Details
-- Checkout
-- Login
-- Sign Up
+- Emergency Reporting
+- Task Manager
 
-### 03. Brand & Support
+### Support
 
-- About
-- Meet the Team
+- Profile
+- Settings
 - Contact
-- Footer
+- Administration
 
-Each screen description should remain concise.
+Each screen explanation should briefly answer:
+
+- What is this screen?
+- Why does it exist?
+- How does it improve the user experience?
+
+Keep descriptions concise (2–4 sentences).
 
 ---
 
-## 12. Outcome
+## 13. Outcome
 
-Summarize the final solution.
+Summarize the completed solution.
 
 Include:
 
 - What was accomplished
-- How the project addressed the original challenge
+- How the project addressed the original problem
 - Overall value delivered
 
-Do not invent business metrics or measurable outcomes.
+Do not invent measurable business outcomes.
 
 ---
 
-## 13. Reflection
+## 14. Reflection
 
 Write from a first-person perspective.
 
 Discuss:
 
-- What you learned
+- What I learned
 - Design lessons
 - Technical lessons
 - Challenges encountered
-- What you would improve if revisiting the project today
+- What I would improve today
 
-Reflection should demonstrate growth and critical thinking.
+Reflection should demonstrate growth, honesty, and critical thinking.
 
 ---
 
-## 14. Project Assets
+## 15. Project Assets
 
-Every project should document its available resources.
+Document all supporting project resources.
 
 ### Images
 
@@ -310,14 +382,15 @@ Include:
 
 - Cover image
 - Interface screenshots
-- Design assets
-- Other supporting visuals
+- Supporting visuals
 
-Maintain a consistent folder structure.
+Maintain a consistent folder structure across all projects.
 
 ### External Links
 
-If available:
+Include only links that actually exist.
+
+Examples:
 
 - Figma
 - GitHub
@@ -327,70 +400,88 @@ If available:
 
 ---
 
+# Screenshot Guidelines
+
+Screens exist to support the story—not replace it.
+
+Group related screens into logical chapters rather than documenting them individually without context.
+
+Every screenshot should reinforce the design narrative.
+
+When describing a screen, explain:
+
+- Its purpose
+- Its role within the user journey
+- Its contribution to the overall experience
+
+Avoid explaining every individual component unless it is directly related to a key design decision.
+
+---
+
 # Writing Guidelines
 
-Every case study should:
+Every case study should answer four questions:
 
-- Tell a coherent story.
-- Prioritize design reasoning over feature descriptions.
-- Be concise and easy to skim.
-- Support screenshots with meaningful context.
-- Maintain a professional tone.
-- Accurately represent the project.
+1. What problem existed?
+
+2. Why was this solution designed?
+
+3. How does the interface solve the problem?
+
+4. What did I learn from the project?
+
+Prioritize clarity over length.
+
+Design reasoning should always take precedence over feature descriptions.
 
 ---
 
 # AI Guidelines
 
-This template serves as the reference structure for AI-assisted portfolio generation.
+This template serves as the presentation layer for AI-assisted portfolio generation.
 
-Each project should provide factual metadata only.
+Each project's metadata provides the factual content.
 
-The AI is responsible for presenting that information using this template.
+The AI is responsible for transforming those facts into a professional case study while preserving accuracy.
 
 ---
 
 ## AI Rules
 
-- Never invent project facts.
-- Never invent research findings.
-- Never invent usability testing.
-- Never invent business metrics.
-- Never exaggerate responsibilities.
-- Never fabricate technical implementation details.
-- Preserve factual accuracy.
-- Keep explanations concise.
-- Prioritize design decisions over feature lists.
+Never invent:
 
----
+- Project facts
+- User research
+- Business metrics
+- Usability testing
+- Technical implementation
+- Responsibilities
+- Outcomes
 
-## Writing Style
+Always:
 
-Use:
-
-- Professional language
-- Clear explanations
-- Honest observations
-- Concise paragraphs
-- Confident but realistic tone
-
-Avoid:
-
-- Generic UX buzzwords
-- Marketing language
-- Unsupported claims
-- Fake statistics
-- Repetitive descriptions
-- Unnecessary filler
+- Preserve factual accuracy
+- Explain design reasoning
+- Maintain a professional tone
+- Keep explanations concise
+- Support the narrative with screenshots
+- Follow the standard case study structure
 
 ---
 
 # Portfolio Philosophy
 
-The purpose of every case study is not to showcase every screen.
+This portfolio is intended to demonstrate how I approach design problems—not simply the interfaces I created.
 
-The purpose is to demonstrate thoughtful problem-solving, intentional design decisions, and the ability to transform business requirements into meaningful user experiences.
+Every case study should communicate:
 
-Screenshots support the story.
+- The business context
+- The problem
+- The design thinking
+- The solution
+- The outcome
+- The lessons learned
 
-They should never replace it.
+The strongest portfolios are not remembered because they contain many screens.
+
+They are remembered because they clearly communicate thoughtful problem-solving and intentional design decisions.
