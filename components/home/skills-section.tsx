@@ -53,10 +53,10 @@ const skillGroups: SkillGroup[] = [
     number: "01",
     title: "Front-End Development",
     description:
-      "Building responsive interfaces with a focus on clarity, structure, and maintainable implementation.",
+      "Building high-performance, accessible, and responsive interfaces with structured component architecture.",
     skills: [
-      { name: "HTML", icon: SiHtml5 },
-      { name: "CSS", icon: SiCss },
+      { name: "HTML5", icon: SiHtml5 },
+      { name: "CSS3", icon: SiCss },
       { name: "JavaScript", icon: SiJavascript },
       { name: "TypeScript", icon: SiTypescript },
       { name: "React", icon: SiReact },
@@ -67,9 +67,9 @@ const skillGroups: SkillGroup[] = [
   },
   {
     number: "02",
-    title: "UI/UX & Design",
+    title: "UI/UX & Visual Design",
     description:
-      "Shaping thoughtful digital experiences through visual hierarchy, prototyping, and user-centered design.",
+      "Shaping thoughtful user journeys, wireframes, high-fidelity prototypes, and comprehensive design systems.",
     skills: [
       { name: "Figma", icon: SiFigma },
       { name: "User Flows", icon: Route },
@@ -81,28 +81,28 @@ const skillGroups: SkillGroup[] = [
   },
   {
     number: "03",
-    title: "Data & Analytics",
+    title: "Data Analytics & Insights",
     description:
-      "Turning information into useful insights through organized analysis and clear visual storytelling.",
+      "Transforming complex data into clear dashboards, visual reports, and data-driven storytelling.",
     skills: [
       { name: "Data Analysis", icon: FileSpreadsheet },
       { name: "Data Visualization", icon: ChartNoAxesCombined },
       { name: "Dashboard Design", icon: LayoutDashboard },
-      { name: "Insight Communication", icon: Lightbulb },
+      { name: "Insight Reporting", icon: Lightbulb },
     ],
     icon: BarChart3,
   },
   {
     number: "04",
-    title: "Digital Operations",
+    title: "Digital Operations & Systems",
     description:
-      "Creating organized systems, documentation, and workflows that help teams work more effectively.",
+      "Creating structured documentation, workflow automation, and productivity systems that optimize team performance.",
     skills: [
       { name: "Documentation", icon: FileText },
-      { name: "Workflow Organization", icon: Workflow },
-      { name: "Research", icon: Search },
+      { name: "Workflow Architecture", icon: Workflow },
+      { name: "Research & Analysis", icon: Search },
       { name: "Task Coordination", icon: ListChecks },
-      { name: "Process Improvement", icon: RefreshCw },
+      { name: "Process Optimization", icon: RefreshCw },
     ],
     icon: Workflow,
   },
@@ -112,60 +112,60 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="w-full border-t border-border/60 bg-surface/40 py-16 md:py-24 lg:py-32"
+      className="w-full border-t border-border/80 bg-background py-20 md:py-28 lg:py-32"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <SectionHeader
-          label="SKILLS & TOOLS"
-          title="The tools and thinking behind the work."
-          description="A focused overview of the capabilities I bring to digital projects, from the first idea to the finished solution."
-          className="mb-12 lg:mb-16"
+          label="CAPABILITIES"
+          title="Technical Competencies & Specialized Tools"
+          description="A comprehensive inventory of skills bringing conceptual ideas into executed digital products."
+          className="mb-14 lg:mb-20"
         />
 
-        <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
+        <div className="grid gap-8 md:grid-cols-2 lg:gap-10">
           {skillGroups.map((group, index) => {
             const Icon = group.icon;
 
             return (
               <motion.article
                 key={group.number}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{
-                  duration: 0.5,
+                  duration: 0.55,
                   delay: index * 0.08,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="rounded-2xl border border-border/80 bg-background p-6 lg:p-8"
+                className="group relative rounded-3xl border border-border/80 bg-surface/40 p-8 lg:p-10 transition-all duration-300 hover:border-gold/60 hover:bg-surface/80 shadow-xs"
               >
                 <div className="flex items-start justify-between gap-6">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/70 bg-surface text-foreground">
-                    <Icon className="h-5 w-5" aria-hidden={true} />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-gold/40 bg-background text-gold shadow-xs transition-colors group-hover:bg-gold group-hover:text-white">
+                    <Icon className="h-6 w-6" aria-hidden={true} />
                   </div>
-                  <span className="text-[11px] font-semibold uppercase tracking-widest text-muted">
+                  <span className="font-serif text-3xl font-light text-gold/40">
                     {group.number}
                   </span>
                 </div>
 
-                <h3 className="mt-8 font-serif text-xl font-bold tracking-tight text-foreground lg:text-2xl">
+                <h3 className="mt-8 font-serif text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
                   {group.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted">
+                <p className="mt-3 text-sm leading-relaxed text-muted font-light">
                   {group.description}
                 </p>
 
-                <ul className="mt-6 flex flex-wrap gap-2" aria-label={`${group.title} skills`}>
+                <ul className="mt-8 flex flex-wrap gap-2.5" aria-label={`${group.title} skills`}>
                   {group.skills.map((skill) => {
                     const SkillIcon = skill.icon;
 
                     return (
                       <li
                         key={skill.name}
-                        className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-surface px-3 py-1.5 text-xs font-medium text-foreground"
+                        className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-background px-4 py-2 text-xs font-medium uppercase tracking-wider text-foreground transition-all duration-200 hover:border-gold hover:bg-gold/10"
                       >
                         <SkillIcon
-                          className="h-3.5 w-3.5 shrink-0 text-muted"
+                          className="h-3.5 w-3.5 shrink-0 text-gold"
                           aria-hidden={true}
                         />
                         <span>{skill.name}</span>

@@ -1,81 +1,85 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GraduationCap } from "lucide-react";
+import { Award, GraduationCap } from "lucide-react";
 import SectionHeader from "@/components/ui/section-header";
 
 export default function EducationSection() {
   return (
     <section
       id="education"
-      className="w-full border-t border-border/60 bg-background py-16 md:py-24 lg:py-32"
+      className="w-full border-t border-border/80 bg-surface/30 py-20 md:py-28 lg:py-32"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <SectionHeader
-          label="EDUCATION"
-          title="A foundation for continuous learning."
-          description="My academic background gave me a broad foundation in technology and continues to shape how I approach digital work."
-          className="mb-12 lg:mb-16"
+          label="ACADEMICS"
+          title="Academic Foundation & Distinctions"
+          description="Grounding digital innovation in rigorous technical education and academic excellence."
+          className="mb-14 lg:mb-20"
         />
 
         <motion.article
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="grid gap-8 rounded-2xl border border-border/80 bg-surface/50 p-6 md:grid-cols-[auto_1fr_auto] md:items-start md:p-8"
+          className="relative overflow-hidden rounded-3xl border border-gold/30 bg-background p-8 md:p-12 lg:p-14 shadow-md"
         >
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-border/70 bg-background text-foreground">
-            <GraduationCap className="h-6 w-6" aria-hidden={true} />
-          </div>
+          {/* Top Gold Ribbon Accent */}
+          <div className="absolute top-0 right-0 h-32 w-32 bg-gold/5 rounded-bl-full pointer-events-none" />
 
-          <div className="md:col-span-2">
-            <p className="text-[11px] font-semibold uppercase tracking-widest text-muted">
-              Academic Background
-            </p>
-            <h3 className="mt-3 font-serif text-2xl font-bold tracking-tight text-foreground lg:text-3xl">
-              Bachelor of Science in Information Technology
-            </h3>
-            <p className="mt-2 text-sm font-medium text-foreground sm:text-base">
-              Major in Web and Mobile Development
-            </p>
-            <p className="mt-1 text-sm text-muted sm:text-base">
-              Bulacan State University · 2022–2026
-            </p>
-            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
-              My studies developed a broad foundation in software development,
-              digital systems, web and mobile technologies, and structured
-              problem-solving.
-            </p>
+          <div className="grid gap-10 md:grid-cols-12 md:items-start">
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-gold/50 bg-gold/10 text-gold shadow-xs md:col-span-2">
+              <GraduationCap className="h-7 w-7" aria-hidden={true} />
+            </div>
 
-            <div className="mt-6 border-t border-border/70 pt-6">
-              <p className="text-[11px] font-semibold uppercase tracking-widest text-muted">
-                Academic Achievements
+            <div className="md:col-span-10">
+              <div className="flex flex-wrap items-center justify-between gap-4">
+                <div>
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.35em] text-gold">
+                    BULACAN STATE UNIVERSITY · 2022–2026
+                  </span>
+                  <h3 className="mt-2 font-serif text-3xl font-normal tracking-tight text-foreground lg:text-4xl">
+                    Bachelor of Science in Information Technology
+                  </h3>
+                  <p className="mt-1 font-serif italic text-lg text-gold-dark font-light">
+                    Major in Web &amp; Mobile Application Development
+                  </p>
+                </div>
+                <span className="inline-flex items-center gap-2 rounded-full border border-gold/60 bg-gold/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-dark">
+                  <Award className="h-3.5 w-3.5" /> Cum Laude
+                </span>
+              </div>
+
+              <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted font-light sm:text-base">
+                Curriculum focused on advanced web &amp; mobile software engineering, database management systems, UI/UX architecture, data analytics, and digital project governance.
               </p>
-              <ul className="mt-4 grid gap-3 text-sm text-foreground sm:grid-cols-2">
-                <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground" />
-                  <span>Graduated Cum Laude</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground" />
-                  <span>Dean&apos;s List, A.Y. 2022–2023</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground" />
-                  <span>Dean&apos;s List, A.Y. 2023–2024</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground" />
-                  <span>Student Leadership Award, A.Y. 2025–2026</span>
-                </li>
-              </ul>
+
+              <div className="mt-10 border-t border-border/60 pt-8">
+                <span className="text-[11px] font-semibold uppercase tracking-[0.35em] text-gold">
+                  ACADEMIC HONORS &amp; RECOGNITION
+                </span>
+                <ul className="mt-6 grid gap-4 text-sm text-foreground sm:grid-cols-2">
+                  <li className="flex items-center gap-3.5 rounded-xl border border-border/70 bg-surface/50 p-4">
+                    <span className="h-2 w-2 rounded-full bg-gold shrink-0" />
+                    <span className="font-medium">Graduated Cum Laude</span>
+                  </li>
+                  <li className="flex items-center gap-3.5 rounded-xl border border-border/70 bg-surface/50 p-4">
+                    <span className="h-2 w-2 rounded-full bg-gold shrink-0" />
+                    <span className="font-medium">Dean&apos;s List Honor, A.Y. 2022–2023</span>
+                  </li>
+                  <li className="flex items-center gap-3.5 rounded-xl border border-border/70 bg-surface/50 p-4">
+                    <span className="h-2 w-2 rounded-full bg-gold shrink-0" />
+                    <span className="font-medium">Dean&apos;s List Honor, A.Y. 2023–2024</span>
+                  </li>
+                  <li className="flex items-center gap-3.5 rounded-xl border border-border/70 bg-surface/50 p-4">
+                    <span className="h-2 w-2 rounded-full bg-gold shrink-0" />
+                    <span className="font-medium">Student Leadership Recognition, A.Y. 2025–2026</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-
-          <span className="text-sm font-medium text-muted md:col-start-3 md:row-start-1 md:pt-1">
-            IT Graduate
-          </span>
         </motion.article>
       </div>
     </section>

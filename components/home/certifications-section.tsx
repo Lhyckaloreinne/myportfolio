@@ -7,18 +7,19 @@ import SectionHeader from "@/components/ui/section-header";
 
 const certificates = [
   {
-    title: "Excel Macros & VBA for Beginners",
-    organization: "Simplilearn · SkillUp",
-    issued: "Issued April 10, 2026",
-    image: "/certificates/Certificate 2 (1).jpg",
-    alt: "Declaration of completion certificate for Excel Macros and VBA for Beginners",
-  },
-  {
-    title: "Data Analytics Essentials",
-    organization: "Cisco Networking Academy",
-    issued: "Issued May 5, 2026",
+  
+    title: "Data Analytics Essentials & Visualization",
+    organization: "CISCO NETWORKING ACADEMY",
+    issued: "Issued May 2026",
     image: "/certificates/Certificate 2 (2).jpg",
     alt: "Cisco Networking Academy certificate for Data Analytics Essentials",
+  },
+  {
+     title: "Excel Macros & VBA Automation for Beginners",
+    organization: "SIMPLILEARN · SKILLUP",
+    issued: "Issued April 2026",
+    image: "/certificates/Certificate 2 (1).jpg",
+    alt: "Completion certificate for Excel Macros and VBA for Beginners",
   },
 ];
 
@@ -26,66 +27,65 @@ export default function CertificationsSection() {
   return (
     <section
       id="certifications"
-      className="w-full border-t border-border/60 bg-surface/40 py-16 md:py-24 lg:py-32"
+      className="w-full border-t border-border/80 bg-background py-20 md:py-28 lg:py-32"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <SectionHeader
-          label="CERTIFICATIONS"
-          title="Proof of continued learning."
-          description="Selected certificates that reflect my growing skills in productivity tools and data analytics."
-          className="mb-12 lg:mb-16"
+          label="CREDENTIALS"
+          title="Certifications & Continuous Learning"
+          description="Verified professional credentials in automated productivity and data analytics."
+          className="mb-14 lg:mb-20"
         />
 
         <div className="grid gap-8 md:grid-cols-2 lg:gap-10">
           {certificates.map((certificate, index) => (
             <motion.article
               key={certificate.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{
-                duration: 0.5,
+                duration: 0.55,
                 delay: index * 0.1,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="overflow-hidden rounded-2xl border border-border/80 bg-background"
+              className="group overflow-hidden rounded-3xl border border-border/80 bg-surface/30 transition-all duration-500 hover:border-gold/60 hover:shadow-md"
             >
               <a
                 href={certificate.image}
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`Open ${certificate.title} certificate image`}
-                className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/30 focus-visible:ring-inset"
+                className="block focus-visible:outline-none"
               >
-                <div className="relative aspect-4/3 overflow-hidden border-b border-border/70 bg-white p-3 sm:p-5">
+                <div className="relative aspect-[4/3] overflow-hidden border-b border-border/70 bg-white p-4 sm:p-6">
                   <Image
                     src={certificate.image}
                     alt={certificate.alt}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-contain p-3 transition-transform duration-500 group-hover:scale-[1.02] sm:p-5"
+                    className="object-contain p-4 transition-transform duration-700 group-hover:scale-[1.03] sm:p-6"
                   />
-                  <span className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-border/70 bg-background/90 text-foreground opacity-0 shadow-sm transition-opacity duration-300 group-hover:opacity-100">
+                  <div className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full border border-gold/50 bg-background/90 text-gold shadow-md opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     <ArrowUpRight className="h-4 w-4" aria-hidden={true} />
-                  </span>
+                  </div>
                 </div>
               </a>
 
-              <div className="p-6 lg:p-8">
-                <div className="flex items-start justify-between gap-5">
+              <div className="p-8">
+                <div className="flex items-start justify-between gap-4">
                   <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-widest text-muted">
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.35em] text-gold">
                       {certificate.organization}
-                    </p>
-                    <h3 className="mt-3 font-serif text-xl font-bold tracking-tight text-foreground lg:text-2xl">
+                    </span>
+                    <h3 className="mt-2.5 font-serif text-2xl font-normal tracking-tight text-foreground lg:text-3xl">
                       {certificate.title}
                     </h3>
-                    <p className="mt-3 text-sm text-muted">{certificate.issued}</p>
+                    <p className="mt-3 text-xs uppercase tracking-widest text-muted">{certificate.issued}</p>
                   </div>
-                  <Award
-                    className="mt-1 h-5 w-5 shrink-0 text-muted"
-                    aria-hidden={true}
-                  />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-gold/30 bg-gold/10 text-gold shrink-0">
+                    <Award className="h-5 w-5" aria-hidden={true} />
+                  </div>
                 </div>
               </div>
             </motion.article>

@@ -3,20 +3,35 @@
 @theme {
   --font-sans: var(--font-inter), Arial, Helvetica, sans-serif;
   --font-serif: var(--font-cormorant), Georgia, serif;
-  --color-background: #f7f1e7;
-  --color-foreground: #1d1a17;
-  --color-muted: #7b7367;
-  --color-border: #d9d2c6;
-  --color-surface: #f9f4ec;
+  --font-italiana: var(--font-italiana), Georgia, serif;
+
+  --color-background: #faf7f2;
+  --color-foreground: #121110;
+  --color-surface: #f4efea;
+  --color-surface-card: #faf8f5;
+  --color-muted: #7e756b;
+  --color-border: #e5ddd3;
+  --color-gold: #c5a059;
+  --color-gold-dark: #b8934c;
+  --color-gold-light: rgba(197, 160, 89, 0.12);
+
+  --color-obsidian: #121110;
+  --color-obsidian-card: #1a1918;
+  --color-obsidian-border: #2e2c2a;
 }
 
 :root {
-  --background: #f7f1e7;
-  --foreground: #1d1a17;
-
-  --muted: #7b7367;
-  --border: #d9d2c6;
-  --surface: #f9f4ec;
+  --background: #faf7f2;
+  --foreground: #121110;
+  --surface: #f4efea;
+  --surface-card: #faf8f5;
+  --muted: #7e756b;
+  --border: #e5ddd3;
+  --gold: #c5a059;
+  --gold-dark: #b8934c;
+  --obsidian: #121110;
+  --obsidian-card: #1a1918;
+  --obsidian-border: #2e2c2a;
 }
 
 * {
@@ -30,11 +45,89 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-dm-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
+/* Headings use high-contrast luxury serif */
 h1,
 h2,
-h3 {
-  font-family: var(--font-playfair), Georgia, serif;
+h3,
+h4 {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+/* Vogue Luxury Custom Utilities */
+
+/* Arch Frame cutouts like Reference 3 */
+.arch-frame {
+  border-top-left-radius: 180px;
+  border-top-right-radius: 180px;
+}
+
+.arch-frame-sm {
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+.arch-frame-md {
+  border-top-left-radius: 140px;
+  border-top-right-radius: 140px;
+}
+
+/* Vogue serif font variants */
+.font-cormorant {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+.font-italiana {
+  font-family: var(--font-italiana), Georgia, serif;
+}
+
+/* Gold Gradient Text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #d4af37 0%, #c5a059 50%, #e6ca65 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Offset photo frame outline matching Reference 1 & Reference 2 */
+.vogue-offset-frame {
+  position: relative;
+}
+
+.vogue-offset-frame::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: -16px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  border-radius: inherit;
+  z-index: 0;
+  pointer-events: none;
+  transition: transform 0.4s ease;
+}
+
+.vogue-offset-frame:hover::before {
+  transform: translate(-4px, 4px);
+}
+
+/* Custom Vogue Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #faf7f2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5a059;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8934c;
 }

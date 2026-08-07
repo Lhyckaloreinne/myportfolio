@@ -23,22 +23,22 @@ export default function SectionHeader({
         isCenter ? "items-center text-center" : "items-start text-left"
       } ${className}`}
     >
-      {/* Label / Eyebrow */}
+      {/* Eyebrow / Vogue Category Label */}
       <div className="mb-4 inline-flex items-center gap-3">
-        <span className="h-px w-8 bg-foreground/20" />
-        <span className="text-[11px] font-semibold uppercase tracking-[0.4em] text-muted">
+        <span className="h-px w-10 bg-gold" />
+        <span className="text-[11px] font-semibold uppercase tracking-[0.45em] text-gold">
           {label}
         </span>
       </div>
 
       {/* Main Section Title */}
-      <h2 className="font-serif text-3xl font-semibold tracking-tight text-foreground sm:text-4xl lg:text-5xl xl:text-6xl">
+      <h2 className="font-serif text-4xl font-normal tracking-tight text-foreground sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.08]">
         {title}
       </h2>
 
       {/* Supporting Description */}
       {description && (
-        <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg lg:text-xl">
+        <p className="mt-5 max-w-none text-base leading-relaxed text-muted sm:text-lg lg:text-xl font-light">
           {description}
         </p>
       )}
