@@ -1,0 +1,64 @@
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
+
+export interface CategoryPageProps {
+  title: string;
+  subtitle: string;
+  category: string;
+  description?: string;
+}
+
+export default function CategoryPage({
+  title,
+  subtitle,
+  category,
+  description,
+}: CategoryPageProps) {
+  return (
+    <div className="w-full bg-[#faf7f2] min-h-[70vh] py-16 md:py-24">
+      <div className="mx-auto max-w-[1400px] px-6 lg:px-8 xl:px-12">
+        {/* Back Navigation */}
+        <div className="mb-8">
+          <Link
+            href="/#what-i-do"
+            className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-[#7e756b] transition-colors hover:text-[#c5a059]"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            <span>Back to Specializations</span>
+          </Link>
+        </div>
+
+        {/* Hero Section */}
+        <div className="mb-16 border-b border-[#e5ddd3] pb-12">
+          <div className="inline-block rounded-full border border-[#c5a059]/40 bg-[#f4efea] px-3.5 py-1 text-[10px] font-semibold tracking-[0.25em] uppercase text-[#c5a059] mb-4">
+            {category}
+          </div>
+          <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-normal tracking-tight text-[#121110] leading-tight mb-6">
+            {title}
+          </h1>
+          <p className="max-w-3xl text-base md:text-lg leading-relaxed text-[#7e756b] font-light">
+            {subtitle}
+          </p>
+          {description && (
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-[#7e756b]/80 font-light">
+              {description}
+            </p>
+          )}
+        </div>
+
+        {/* Placeholder Content */}
+        <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-[#e5ddd3] bg-[#faf8f5] px-6 py-24 text-center">
+          <div className="rounded-full border border-[#c5a059]/30 bg-[#f4efea] p-4 text-[#c5a059] mb-4">
+            <span className="font-serif text-xl font-light">01</span>
+          </div>
+          <h2 className="font-serif text-2xl md:text-3xl font-normal tracking-tight text-[#121110] mb-3">
+            Projects Coming Soon
+          </h2>
+          <p className="max-w-md text-xs md:text-sm text-[#7e756b] font-light leading-relaxed">
+            Curated case studies, interactive demonstrations, and detailed project documentation for this domain are currently under development.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
