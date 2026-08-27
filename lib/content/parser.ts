@@ -1,14 +1,20 @@
+import fs from "fs";
+import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkHtml from "remark-html";
 import {
+  CaseStudyData,
+  KeyDecision,
   Project,
   ProjectExternalLinks,
   ProjectFrontmatter,
   ProjectImage,
   ProjectMetadata,
   ProjectSection,
+  WalkthroughGroup,
+  WalkthroughItem,
 } from "./types";
 
 /**
@@ -38,6 +44,61 @@ export function slugify(text: string): string {
 }
 
 /**
+ * Generic asset discovery helper that scans public/projects/ directory
+ * matching folder names against slug keywords without hardcoding project names.
+ */
+export function discoverProjectPreviewImages(slug: string, category: string): string[] {
+  const processCwd = process.cwd();
+  const candidateDirs = [
+    path.join(processCwd, "public", "projects", `${category} designs`),
+    path.join(processCwd, "public", "projects", category),
+    path.join(processCwd, "public", "projects"),
+  ];
+
+  const slugWords = slug.toLowerCase().split("-").filter((w) => w.length > 2);
+
+  for (const baseDir of candidateDirs) {
+    if (!fs.existsSync(baseDir)) continue;
+
+    try {
+      const entries = fs.readdirSync(baseDir, { withFileTypes: true });
+      const matchedFolder = entries.find((entry) => {
+        if (!entry.isDirectory()) return false;
+        const folderLower = entry.name.toLowerCase();
+        const matchedCount = slugWords.filter((word) => folderLower.includes(word)).length;
+        return matchedCount === slugWords.length || (slugWords.length >= 2 && matchedCount >= 2);
+      });
+
+      if (matchedFolder) {
+        const folderPath = path.join(baseDir, matchedFolder.name);
+        const images: string[] = [];
+
+        const readDirRecursive = (dirPath: string) => {
+          const files = fs.readdirSync(dirPath, { withFileTypes: true });
+          for (const file of files) {
+            const fullPath = path.join(dirPath, file.name);
+            if (file.isDirectory()) {
+              readDirRecursive(fullPath);
+            } else if (/\.(png|jpe?g|webp|svg)$/i.test(file.name)) {
+              const relativePath = path.relative(path.join(processCwd, "public"), fullPath);
+              const webUrl = "/" + relativePath.split(path.sep).join("/");
+              images.push(webUrl);
+            }
+          }
+        };
+
+        readDirRecursive(folderPath);
+        if (images.length > 0) return images;
+      }
+    } catch {
+      // Ignore reading errors on fallback
+    }
+  }
+
+  return [];
+}
+
+/**
  * Extracts fallback metadata when explicit YAML frontmatter is absent or incomplete.
  * Reads titles, markdown metadata tables, and blockquotes from existing documentation files.
  */
@@ -53,6 +114,12 @@ export function extractFallbackFrontmatter(
     const h1Match = markdownContent.match(/^#\s+(.+)$/m);
     if (h1Match) {
       title = h1Match[1].replace(/\s*Metadata\s*$/i, "").trim();
+      if (title.includes(":")) {
+        const parts = title.split(":");
+        if (slug.toLowerCase() === parts[0].trim().toLowerCase()) {
+          title = parts[0].trim();
+        }
+      }
     } else {
       title = slug
         .split("-")
@@ -61,7 +128,7 @@ export function extractFallbackFrontmatter(
     }
   }
 
-  // 2. Extract key-value metadata from Markdown tables if present (e.g. | Project Title | Northern Cuts |)
+  // 2. Extract key-value metadata from Markdown tables if present
   const tableData: Record<string, string> = {};
   const tableRowRegex = /^\|\s*([^|]+)\s*\|\s*([^|]+)\s*\|$/gm;
   let match: RegExpExecArray | null;
@@ -70,6 +137,16 @@ export function extractFallbackFrontmatter(
     const key = match[1].trim().toLowerCase();
     const value = match[2].trim();
     if (key && value && !key.startsWith("---") && key !== "item") {
+      tableData[key] = value;
+    }
+  }
+
+  // 2b. Extract key-value metadata from blockquotes if present
+  const blockquoteRegex = />\s*\*\*([^*:]+):\*\*\s*([^\n]+)/g;
+  while ((match = blockquoteRegex.exec(markdownContent)) !== null) {
+    const key = match[1].trim().toLowerCase();
+    const value = match[2].trim();
+    if (key && value && !tableData[key]) {
       tableData[key] = value;
     }
   }
@@ -92,26 +169,49 @@ export function extractFallbackFrontmatter(
     tags = parsedData.tags.split(",").map((t) => t.trim());
   }
 
+  // 5. Extract previews array generically
+  let previews: string[] = [];
+  if (Array.isArray(parsedData.previews)) {
+    previews = parsedData.previews.map(String);
+  } else if (Array.isArray(parsedData.previewImages)) {
+    previews = parsedData.previewImages.map(String);
+  } else {
+    previews = discoverProjectPreviewImages(slug, category);
+  }
+
+  const projectType =
+    (parsedData.projectType as string) || tableData["project type"] || tableData["category"];
+  const platform =
+    (parsedData.platform as string) ||
+    tableData["platform"] ||
+    (projectType?.toLowerCase().includes("mobile")
+      ? "Mobile Application"
+      : projectType?.toLowerCase().includes("web")
+      ? "Responsive Web"
+      : undefined);
+
   return {
     title: title || (tableData["project title"] ?? "Untitled Project"),
     slug: (parsedData.slug as string) || slug,
     category: (parsedData.category as string) || tableData["category"] || category,
-    projectType: (parsedData.projectType as string) || tableData["project type"],
+    projectType,
     status: (parsedData.status as string) || tableData["status"],
     year: (parsedData.year as string) || tableData["year"]?.replace(/[\[\]]/g, ""),
     duration: (parsedData.duration as string) || tableData["duration"]?.replace(/[\[\]]/g, ""),
     client: (parsedData.client as string) || tableData["client"],
-    platform: (parsedData.platform as string) || tableData["platform"],
+    platform,
     role: (parsedData.role as string) || tableData["role"],
     team: (parsedData.team as string) || tableData["team"]?.replace(/[\[\]]/g, ""),
     tools,
-    cover: (parsedData.cover as string) || undefined,
+    cover: (parsedData.cover as string) || previews[0] || undefined,
+    previews,
     featured: typeof parsedData.featured === "boolean" ? parsedData.featured : false,
     tags,
     order: typeof parsedData.order === "number" ? parsedData.order : undefined,
     ...parsedData,
   };
 }
+
 
 /**
  * Compiles raw markdown text into sanitized HTML using remark, remark-gfm, and remark-html.
@@ -236,6 +336,202 @@ export function calculateReadingTime(text: string): number {
 }
 
 /**
+ * Extracts structured case study sections from project markdown content.
+ * Normalizes headings across different case study markdown formats.
+ */
+export function extractCaseStudyData(
+  markdownContent: string,
+  defaultPreviews: string[] = []
+): CaseStudyData {
+  const result: CaseStudyData = {};
+  const lines = markdownContent.split("\n");
+
+  const getSectionContent = (headingRegex: RegExp): string => {
+    let capturing = false;
+    const captured: string[] = [];
+
+    for (const line of lines) {
+      if (/^#\s+/.test(line)) {
+        if (headingRegex.test(line)) {
+          capturing = true;
+          continue;
+        } else if (capturing) {
+          break;
+        }
+      }
+      if (capturing) {
+        captured.push(line);
+      }
+    }
+
+    return captured
+      .join("\n")
+      .replace(/^---$/gm, "")
+      .replace(/>\s*[*_][^*_]+[*_]:[^\n]*/g, "")
+      .trim();
+  };
+
+  // 1. Overview & Context
+  const overviewText = getSectionContent(/overview|summary|short description/i);
+  const contextText = getSectionContent(/context|background/i);
+  result.overview = overviewText || undefined;
+  result.businessContext = contextText || undefined;
+
+  // 2. Challenge
+  const challengeText = getSectionContent(/problem|challenge/i);
+  result.challenge = challengeText || undefined;
+
+  // 3. Goals
+  const goalsSection = getSectionContent(/goal/i);
+  if (goalsSection) {
+    const bizGoals: string[] = [];
+    const uxGoals: string[] = [];
+    let currentGoalType: "biz" | "ux" | null = null;
+
+    for (const line of goalsSection.split("\n")) {
+      if (/business goal/i.test(line)) {
+        currentGoalType = "biz";
+      } else if (/user experience|ux goal/i.test(line)) {
+        currentGoalType = "ux";
+      } else if (/^[-*]\s+(.+)/.test(line)) {
+        const itemMatch = line.match(/^[-*]\s+(.+)/);
+        if (itemMatch) {
+          const goalText = itemMatch[1].trim();
+          if (currentGoalType === "ux") uxGoals.push(goalText);
+          else if (currentGoalType === "biz") bizGoals.push(goalText);
+          else bizGoals.push(goalText);
+        }
+      }
+    }
+    if (bizGoals.length > 0) result.businessGoals = bizGoals;
+    if (uxGoals.length > 0) result.uxGoals = uxGoals;
+  }
+
+  // 4. Role & Responsibilities
+  const roleSection = getSectionContent(/responsibilities|my role/i);
+  if (roleSection) {
+    const resp: string[] = [];
+    for (const line of roleSection.split("\n")) {
+      const match = line.match(/^[-*]\s+(.+)/);
+      if (match) {
+        resp.push(match[1].trim());
+      }
+    }
+    if (resp.length > 0) result.roleResponsibilities = resp;
+  }
+
+  // 5. Approach & Design Thinking / Visual Direction
+  const approachText = getSectionContent(/approach|design consideration/i);
+  const visualText = getSectionContent(/visual direction|visual design/i);
+  result.approach = approachText || undefined;
+  result.visualDirection = visualText || undefined;
+
+  // 6. Key Design Decisions
+  const decisionsSection = getSectionContent(/key design decision|key decision/i);
+  if (decisionsSection) {
+    const decisions: KeyDecision[] = [];
+    const blocks = decisionsSection.split(/^#{2,3}\s+/m).filter(Boolean);
+
+    for (const block of blocks) {
+      const blockLines = block.split("\n");
+      const title = blockLines[0].replace(/^(?:\d+[\s—-]+)+/g, "").trim();
+      if (!title) continue;
+
+      let reason = "";
+      let impact = "";
+      let rawText = "";
+
+      const reasonMatch = block.match(/Reason:\s*\n*([\s\S]*?)(?=Impact:|\n#{2,3}|$)/i);
+      const impactMatch = block.match(/Impact:\s*\n*([\s\S]*?)(?=\n#{2,3}|$)/i);
+
+      if (reasonMatch) reason = reasonMatch[1].trim();
+      if (impactMatch) impact = impactMatch[1].trim();
+
+      if (!reason && !impact) {
+        rawText = blockLines.slice(1).join("\n").trim();
+      }
+
+      decisions.push({
+        title,
+        reason: reason || undefined,
+        impact: impact || undefined,
+        rawText: rawText || undefined,
+      });
+    }
+
+    if (decisions.length > 0) result.keyDecisions = decisions;
+  }
+
+  // 7. Final Experience / Walkthrough Groups
+  const walkthroughSection = getSectionContent(/experience walkthrough|resident mobile experience|final experience/i);
+  if (walkthroughSection) {
+    const groups: WalkthroughGroup[] = [];
+    const groupBlocks = walkthroughSection.split(/^#{2}\s+/m).filter(Boolean);
+
+    for (const gBlock of groupBlocks) {
+      const lines = gBlock.split("\n");
+      const groupTitle = lines[0].trim();
+      const items: WalkthroughItem[] = [];
+
+      const itemBlocks = gBlock.split(/^#{3}\s+/m).slice(1);
+      for (const iBlock of itemBlocks) {
+        const iLines = iBlock.split("\n");
+        const title = iLines[0].trim();
+
+        let imageFilename = "";
+        const imgMatch = iBlock.match(/`([^`]+\.(?:png|jpg|jpeg|webp))`|!\[[^\]]*\]\(([^)]+)\)/i);
+        if (imgMatch) {
+          imageFilename = imgMatch[1] || imgMatch[2];
+        }
+
+        let purpose = "";
+        const purposeMatch = iBlock.match(/Purpose\s*\n*([\s\S]*?)(?=\n---|#{1,3}|$)/i);
+        if (purposeMatch) {
+          purpose = purposeMatch[1].trim();
+        } else {
+          purpose = iLines.slice(1).filter((l) => !l.startsWith("**Image") && !l.startsWith("`")).join("\n").trim();
+        }
+
+        let resolvedImageUrl: string | undefined = undefined;
+        if (imageFilename) {
+          if (imageFilename.startsWith("/")) {
+            resolvedImageUrl = imageFilename;
+          } else {
+            const found = defaultPreviews.find(
+              (p) => p.endsWith(imageFilename) || p.toLowerCase().includes(imageFilename.toLowerCase())
+            );
+            if (found) resolvedImageUrl = found;
+          }
+        }
+
+        items.push({
+          title,
+          image: resolvedImageUrl,
+          purpose: purpose || undefined,
+        });
+      }
+
+      if (items.length > 0) {
+        groups.push({
+          groupTitle,
+          items,
+        });
+      }
+    }
+
+    if (groups.length > 0) result.walkthroughGroups = groups;
+  }
+
+  // 8. Outcome & Reflection
+  const outcomeText = getSectionContent(/outcome|result/i);
+  const reflectionText = getSectionContent(/reflection|lesson/i);
+  result.outcome = outcomeText || undefined;
+  result.reflection = reflectionText || undefined;
+
+  return result;
+}
+
+/**
  * Main parser entry point. Takes raw file content and compiles a full Project model.
  */
 export async function parseProjectFile(
@@ -251,13 +547,23 @@ export async function parseProjectFile(
   const images = extractImages(content);
   const externalLinks = extractExternalLinks(content);
   const readingTimeMinutes = calculateReadingTime(content);
+  const caseStudyData = extractCaseStudyData(content, frontmatter.previews || []);
+
+  let summary = (frontmatter.description as string) || (frontmatter.summary as string) || "";
+  if (!summary) {
+    const summaryMatch = content.match(/(?:# Project Summary|## Short Description)\s*\n+([\s\S]*?)(?=\n#|\n##|\n---|$)/i);
+    if (summaryMatch) {
+      summary = summaryMatch[1].replace(/>[^\n]*/g, "").trim().split("\n\n")[0].replace(/\n/g, " ");
+    }
+  }
 
   const metadata: ProjectMetadata = {
     slug: frontmatter.slug || slug,
     category: frontmatter.category || category,
     filePath,
     frontmatter,
-    summary: frontmatter.description as string | undefined,
+    summary,
+    previews: frontmatter.previews,
     readingTimeMinutes,
   };
 
@@ -268,5 +574,7 @@ export async function parseProjectFile(
     sections,
     images,
     externalLinks,
+    caseStudyData,
   };
 }
+

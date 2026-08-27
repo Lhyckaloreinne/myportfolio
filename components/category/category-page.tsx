@@ -6,6 +6,7 @@ export interface CategoryPageProps {
   subtitle: string;
   category: string;
   description?: string;
+  children?: React.ReactNode;
 }
 
 export default function CategoryPage({
@@ -13,6 +14,7 @@ export default function CategoryPage({
   subtitle,
   category,
   description,
+  children,
 }: CategoryPageProps) {
   return (
     <div className="w-full bg-[#faf7f2] min-h-[70vh] py-16 md:py-24">
@@ -46,18 +48,22 @@ export default function CategoryPage({
           )}
         </div>
 
-        {/* Placeholder Content */}
-        <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-[#e5ddd3] bg-[#faf8f5] px-6 py-24 text-center">
-          <div className="rounded-full border border-[#c5a059]/30 bg-[#f4efea] p-4 text-[#c5a059] mb-4">
-            <span className="font-serif text-xl font-light">01</span>
+        {/* Main Section Content */}
+        {children ? (
+          <div>{children}</div>
+        ) : (
+          <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-[#e5ddd3] bg-[#faf8f5] px-6 py-24 text-center">
+            <div className="rounded-full border border-[#c5a059]/30 bg-[#f4efea] p-4 text-[#c5a059] mb-4">
+              <span className="font-serif text-xl font-light">01</span>
+            </div>
+            <h2 className="font-serif text-2xl md:text-3xl font-normal tracking-tight text-[#121110] mb-3">
+              Projects Coming Soon
+            </h2>
+            <p className="max-w-md text-xs md:text-sm text-[#7e756b] font-light leading-relaxed">
+              Curated case studies, interactive demonstrations, and detailed project documentation for this domain are currently under development.
+            </p>
           </div>
-          <h2 className="font-serif text-2xl md:text-3xl font-normal tracking-tight text-[#121110] mb-3">
-            Projects Coming Soon
-          </h2>
-          <p className="max-w-md text-xs md:text-sm text-[#7e756b] font-light leading-relaxed">
-            Curated case studies, interactive demonstrations, and detailed project documentation for this domain are currently under development.
-          </p>
-        </div>
+        )}
       </div>
     </div>
   );

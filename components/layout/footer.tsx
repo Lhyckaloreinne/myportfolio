@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Link2, Mail } from "lucide-react";
+import { Link2, Mail } from "lucide-react";
 import { SiBehance, SiGithub } from "react-icons/si";
 
 const footerLinks = [

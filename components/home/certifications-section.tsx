@@ -15,6 +15,13 @@ const certificates = [
     alt: "Cisco Networking Academy certificate for Data Analytics Essentials",
   },
   {
+     title: "HSI On-the-Job Training Program",
+    organization: "Highly Succeed Inc.",
+    issued: "Issued March 2026",
+    image: "/certificates/Certificate 3.jpg",
+    alt: "Certificate of completion for HSI On-the-Job Training Program",
+  },
+  {
      title: "Excel Macros & VBA Automation for Beginners",
     organization: "SIMPLILEARN · SKILLUP",
     issued: "Issued April 2026",

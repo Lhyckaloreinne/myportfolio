@@ -21,6 +21,7 @@ export interface ProjectFrontmatter {
   team?: string;
   tools?: string[];
   cover?: string;
+  previews?: string[];
   featured?: boolean;
   tags?: string[];
   order?: number;
@@ -33,6 +34,7 @@ export interface ProjectMetadata {
   filePath: string;
   frontmatter: ProjectFrontmatter;
   summary?: string;
+  previews?: string[];
   readingTimeMinutes?: number;
 }
 
@@ -60,6 +62,42 @@ export interface ProjectExternalLinks {
   other?: Record<string, string>;
 }
 
+export interface KeyDecision {
+  title: string;
+  decision?: string;
+  reason?: string;
+  impact?: string;
+  rawText?: string;
+  image?: string;
+}
+
+export interface WalkthroughItem {
+  title: string;
+  image?: string;
+  purpose?: string;
+  content?: string;
+}
+
+export interface WalkthroughGroup {
+  groupTitle: string;
+  items: WalkthroughItem[];
+}
+
+export interface CaseStudyData {
+  overview?: string;
+  businessContext?: string;
+  challenge?: string;
+  businessGoals?: string[];
+  uxGoals?: string[];
+  roleResponsibilities?: string[];
+  approach?: string;
+  visualDirection?: string;
+  keyDecisions?: KeyDecision[];
+  walkthroughGroups?: WalkthroughGroup[];
+  outcome?: string;
+  reflection?: string;
+}
+
 export interface Project {
   metadata: ProjectMetadata;
   content: string;
@@ -67,4 +105,6 @@ export interface Project {
   sections: ProjectSection[];
   images: ProjectImage[];
   externalLinks?: ProjectExternalLinks;
+  caseStudyData?: CaseStudyData;
 }
+
