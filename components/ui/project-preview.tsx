@@ -65,7 +65,7 @@ export default function ProjectPreview({
 
   if (!images || images.length === 0) {
     return (
-      <div className="w-full aspect-[16/10] bg-[#f4efea] rounded-xl flex items-center justify-center border border-[#e5ddd3] text-xs text-[#7e756b]">
+      <div className="w-full aspect-[16/10] bg-surface rounded-xl flex items-center justify-center border border-border text-xs text-muted">
         No preview images available
       </div>
     );
@@ -83,35 +83,35 @@ export default function ProjectPreview({
   if (isWeb) {
     return (
       <div
-        className="group relative w-full overflow-hidden rounded-xl border border-[#e5ddd3] bg-[#faf7f2] shadow-sm transition-all duration-300 hover:border-[#c5a059]/40 hover:shadow-md"
+        className="group relative w-full overflow-hidden rounded-xl border border-border bg-background shadow-sm transition-all duration-300 hover:border-gold/40 hover:shadow-md"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         {/* Browser Header Bar */}
-        <div className="flex h-9 items-center justify-between border-b border-[#e5ddd3] bg-[#f4efea]/90 px-4 backdrop-blur-sm">
+        <div className="flex h-9 items-center justify-between border-b border-border bg-surface/90 px-4 backdrop-blur-sm">
           {/* Window Control Buttons */}
           <div className="flex items-center gap-1.5">
-            <span className="h-2.5 w-2.5 rounded-full bg-[#e5ddd3]" />
-            <span className="h-2.5 w-2.5 rounded-full bg-[#c5a059]/40" />
-            <span className="h-2.5 w-2.5 rounded-full bg-[#7e756b]/30" />
+            <span className="h-2.5 w-2.5 rounded-full bg-border" />
+            <span className="h-2.5 w-2.5 rounded-full bg-gold/40" />
+            <span className="h-2.5 w-2.5 rounded-full bg-muted/30" />
           </div>
 
           {/* Browser Address Bar */}
-          <div className="flex items-center gap-1.5 rounded-md border border-[#e5ddd3]/70 bg-[#faf8f5] px-3 py-0.5 text-[11px] font-mono text-[#7e756b]/90 shadow-inner">
-            <Globe className="h-3 w-3 text-[#c5a059]" />
+          <div className="flex items-center gap-1.5 rounded-md border border-border/70 bg-surface-card px-3 py-0.5 text-[11px] font-mono text-muted/90 shadow-inner">
+            <Globe className="h-3 w-3 text-gold" />
             <span className="truncate max-w-[160px] sm:max-w-[220px]">
               https://{domainSlug}
             </span>
           </div>
 
           {/* Spacer to align center */}
-          <div className="w-10 text-right text-[10px] text-[#7e756b]/60 font-mono hidden sm:block">
+          <div className="w-10 text-right text-[10px] text-muted/60 font-mono hidden sm:block">
             {currentIndex + 1}/{images.length}
           </div>
         </div>
 
         {/* Browser Screen Content Area */}
-        <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#e5ddd3]/30">
+        <div className="relative aspect-[16/10] w-full overflow-hidden bg-border/30">
           <AnimatePresence mode="wait">
             <motion.img
               key={currentIndex}
@@ -135,7 +135,7 @@ export default function ProjectPreview({
                   e.stopPropagation();
                   prevSlide();
                 }}
-                className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full border border-[#e5ddd3] bg-[#faf7f2]/90 p-1.5 text-[#121110] opacity-0 backdrop-blur-sm transition-opacity duration-200 hover:bg-[#c5a059] hover:text-white group-hover:opacity-100 focus:opacity-100"
+                className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full border border-border bg-background/90 p-1.5 text-foreground opacity-0 backdrop-blur-sm transition-opacity duration-200 hover:bg-gold hover:text-white group-hover:opacity-100 focus:opacity-100"
                 aria-label="Previous screen"
               >
                 <ChevronLeft className="h-4 w-4" />
@@ -148,7 +148,7 @@ export default function ProjectPreview({
                   e.stopPropagation();
                   nextSlide();
                 }}
-                className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full border border-[#e5ddd3] bg-[#faf7f2]/90 p-1.5 text-[#121110] opacity-0 backdrop-blur-sm transition-opacity duration-200 hover:bg-[#c5a059] hover:text-white group-hover:opacity-100 focus:opacity-100"
+                className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full border border-border bg-background/90 p-1.5 text-foreground opacity-0 backdrop-blur-sm transition-opacity duration-200 hover:bg-gold hover:text-white group-hover:opacity-100 focus:opacity-100"
                 aria-label="Next screen"
               >
                 <ChevronRight className="h-4 w-4" />
@@ -158,7 +158,7 @@ export default function ProjectPreview({
 
           {/* Pagination Indicators */}
           {images.length > 1 && (
-            <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full border border-white/20 bg-[#121110]/50 px-2.5 py-1 backdrop-blur-md">
+            <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full border border-border/60 bg-background/70 px-2.5 py-1 backdrop-blur-md">
               {images.map((_, idx) => (
                 <button
                   key={idx}
@@ -170,8 +170,8 @@ export default function ProjectPreview({
                   }}
                   className={`h-1.5 rounded-full transition-all duration-300 ${
                     idx === currentIndex
-                      ? "w-5 bg-[#c5a059]"
-                      : "w-1.5 bg-white/60 hover:bg-white"
+                      ? "w-5 bg-gold"
+                      : "w-1.5 bg-muted/40 hover:bg-muted"
                   }`}
                   aria-label={`Go to slide ${idx + 1}`}
                 />
@@ -186,7 +186,7 @@ export default function ProjectPreview({
   // Mobile App Phone Mockup Frame
   return (
     <div
-      className="group relative w-full overflow-hidden rounded-xl border border-[#e5ddd3] bg-[#f4efea]/60 p-4 sm:p-6 md:p-8 flex items-center justify-center transition-all duration-300 hover:border-[#c5a059]/40 hover:bg-[#f4efea]"
+      className="group relative w-full overflow-hidden rounded-xl border border-border bg-surface/60 p-4 sm:p-6 md:p-8 flex items-center justify-center transition-all duration-300 hover:border-gold/40 hover:bg-surface"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -227,7 +227,7 @@ export default function ProjectPreview({
               e.stopPropagation();
               prevSlide();
             }}
-            className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full border border-[#e5ddd3] bg-[#faf7f2]/90 p-1.5 text-[#121110] opacity-0 backdrop-blur-sm transition-opacity duration-200 hover:bg-[#c5a059] hover:text-white group-hover:opacity-100 focus:opacity-100"
+            className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full border border-border bg-background/90 p-1.5 text-foreground opacity-0 backdrop-blur-sm transition-opacity duration-200 hover:bg-gold hover:text-white group-hover:opacity-100 focus:opacity-100"
             aria-label="Previous screen"
           >
             <ChevronLeft className="h-4 w-4" />
@@ -240,7 +240,7 @@ export default function ProjectPreview({
               e.stopPropagation();
               nextSlide();
             }}
-            className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full border border-[#e5ddd3] bg-[#faf7f2]/90 p-1.5 text-[#121110] opacity-0 backdrop-blur-sm transition-opacity duration-200 hover:bg-[#c5a059] hover:text-white group-hover:opacity-100 focus:opacity-100"
+            className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full border border-border bg-background/90 p-1.5 text-foreground opacity-0 backdrop-blur-sm transition-opacity duration-200 hover:bg-gold hover:text-white group-hover:opacity-100 focus:opacity-100"
             aria-label="Next screen"
           >
             <ChevronRight className="h-4 w-4" />
@@ -250,7 +250,7 @@ export default function ProjectPreview({
 
       {/* Pagination Indicators */}
       {images.length > 1 && (
-        <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full border border-[#e5ddd3] bg-[#faf7f2]/90 px-2.5 py-1 backdrop-blur-md">
+        <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full border border-border bg-background/90 px-2.5 py-1 backdrop-blur-md">
           {images.map((_, idx) => (
             <button
               key={idx}
@@ -262,8 +262,8 @@ export default function ProjectPreview({
               }}
               className={`h-1.5 rounded-full transition-all duration-300 ${
                 idx === currentIndex
-                  ? "w-5 bg-[#c5a059]"
-                  : "w-1.5 bg-[#7e756b]/40 hover:bg-[#7e756b]"
+                  ? "w-5 bg-gold"
+                  : "w-1.5 bg-muted/40 hover:bg-muted"
               }`}
               aria-label={`Go to slide ${idx + 1}`}
             />

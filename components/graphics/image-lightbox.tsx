@@ -81,7 +81,7 @@ export default function ImageLightbox({
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2, ease: "easeInOut" }}
-        className="fixed inset-0 z-50 flex items-center justify-center bg-[#121110]/95 backdrop-blur-md p-4 sm:p-6 select-none"
+        className="fixed inset-0 z-50 flex items-center justify-center bg-background/95 backdrop-blur-md p-4 sm:p-6 select-none"
         onClick={onClose}
       >
         {/* Floating Top Header: Minimal Counter & Close */}
@@ -89,9 +89,9 @@ export default function ImageLightbox({
           className="absolute top-4 sm:top-6 left-4 sm:left-6 right-4 sm:right-6 z-30 flex items-center justify-between pointer-events-none"
         >
           {/* Subtle Minimal Counter */}
-          <div className="pointer-events-auto rounded-full border border-[#2e2c2a] bg-[#1a1918]/90 backdrop-blur-md px-3.5 py-1 text-xs font-mono text-[#c5a059] tracking-wider shadow-lg">
+          <div className="pointer-events-auto rounded-full border border-border bg-surface/90 backdrop-blur-md px-3.5 py-1 text-xs font-mono text-gold tracking-wider shadow-lg">
             {String(currentIndex + 1).padStart(2, "0")}{" "}
-            <span className="text-[#7e756b] mx-1">/</span>{" "}
+            <span className="text-muted mx-1">/</span>{" "}
             {String(items.length).padStart(2, "0")}
           </div>
 
@@ -103,7 +103,7 @@ export default function ImageLightbox({
               onClose();
             }}
             aria-label="Close Lightbox (ESC)"
-            className="pointer-events-auto inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#2e2c2a] bg-[#1a1918]/90 backdrop-blur-md text-[#faf7f2] transition-colors hover:border-[#c5a059] hover:bg-[#c5a059] hover:text-[#121110] focus:outline-none focus:ring-2 focus:ring-[#c5a059] shadow-lg"
+            className="pointer-events-auto inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface/90 backdrop-blur-md text-foreground transition-colors hover:border-gold hover:bg-gold hover:text-white focus:outline-none focus:ring-2 focus:ring-gold shadow-lg"
           >
             <X className="h-5 w-5" />
           </button>
@@ -118,7 +118,7 @@ export default function ImageLightbox({
               handlePrev();
             }}
             aria-label="Previous image"
-            className="absolute left-3 sm:left-6 z-30 hidden sm:inline-flex h-12 w-12 items-center justify-center rounded-full border border-[#2e2c2a] bg-[#1a1918]/85 backdrop-blur-md text-[#faf7f2] transition-all hover:border-[#c5a059] hover:bg-[#c5a059] hover:text-[#121110] focus:outline-none focus:ring-2 focus:ring-[#c5a059] shadow-xl"
+            className="absolute left-3 sm:left-6 z-30 hidden sm:inline-flex h-12 w-12 items-center justify-center rounded-full border border-border bg-surface/85 backdrop-blur-md text-foreground transition-all hover:border-gold hover:bg-gold hover:text-white focus:outline-none focus:ring-2 focus:ring-gold shadow-xl"
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
@@ -133,7 +133,7 @@ export default function ImageLightbox({
               handleNext();
             }}
             aria-label="Next image"
-            className="absolute right-3 sm:right-6 z-30 hidden sm:inline-flex h-12 w-12 items-center justify-center rounded-full border border-[#2e2c2a] bg-[#1a1918]/85 backdrop-blur-md text-[#faf7f2] transition-all hover:border-[#c5a059] hover:bg-[#c5a059] hover:text-[#121110] focus:outline-none focus:ring-2 focus:ring-[#c5a059] shadow-xl"
+            className="absolute right-3 sm:right-6 z-30 hidden sm:inline-flex h-12 w-12 items-center justify-center rounded-full border border-border bg-surface/85 backdrop-blur-md text-foreground transition-all hover:border-gold hover:bg-gold hover:text-white focus:outline-none focus:ring-2 focus:ring-gold shadow-xl"
           >
             <ChevronRight className="h-6 w-6" />
           </button>
@@ -159,7 +159,7 @@ export default function ImageLightbox({
               alt={currentItem.title}
               width={2200}
               height={1800}
-              className="max-h-[86vh] sm:max-h-[90vh] max-w-[92vw] sm:max-w-[88vw] w-auto h-auto object-contain rounded-xl shadow-2xl border border-[#2e2c2a]/90"
+              className="max-h-[86vh] sm:max-h-[90vh] max-w-[92vw] sm:max-w-[88vw] w-auto h-auto object-contain rounded-xl shadow-2xl border border-border/90"
               priority
               unoptimized
               sizes="(max-width: 768px) 95vw, 90vw"
@@ -178,7 +178,7 @@ export default function ImageLightbox({
                 e.stopPropagation();
                 handlePrev();
               }}
-              className="pointer-events-auto inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border border-[#2e2c2a] bg-[#1a1918]/90 backdrop-blur-md py-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#faf7f2] active:bg-[#c5a059] active:text-[#121110] shadow-lg"
+              className="pointer-events-auto inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border border-border bg-surface/90 backdrop-blur-md py-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-foreground active:bg-gold active:text-white shadow-lg"
             >
               <ChevronLeft className="h-4 w-4" />
               <span>Prev</span>
@@ -190,7 +190,7 @@ export default function ImageLightbox({
                 e.stopPropagation();
                 handleNext();
               }}
-              className="pointer-events-auto inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border border-[#2e2c2a] bg-[#1a1918]/90 backdrop-blur-md py-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#faf7f2] active:bg-[#c5a059] active:text-[#121110] shadow-lg"
+              className="pointer-events-auto inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border border-border bg-surface/90 backdrop-blur-md py-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-foreground active:bg-gold active:text-white shadow-lg"
             >
               <span>Next</span>
               <ChevronRight className="h-4 w-4" />

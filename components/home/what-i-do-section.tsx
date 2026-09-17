@@ -63,7 +63,7 @@ export default function WhatIDoSection() {
   return (
     <section
       id="what-i-do"
-      className="w-full py-20 md:py-28 lg:py-32 bg-[#F6F2E9] border-t border-[#E6DAC6]"
+      className="w-full py-20 md:py-28 lg:py-32 bg-surface/30 border-t border-border/80"
     >
       <div className="mx-auto max-w-[1400px] px-6 lg:px-8 xl:px-12">
         <SectionHeader
@@ -90,11 +90,11 @@ export default function WhatIDoSection() {
             >
               <Link
                 href={item.href}
-                className="group flex flex-col justify-between h-full rounded-2xl border border-[#E6DAC6] bg-[#FBF8F1] p-5 sm:p-6 lg:p-5 xl:p-6 transition-all duration-500 hover:border-[#C8A35B]/70 hover:shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A35B]"
+                className="group flex flex-col justify-between h-full rounded-2xl border border-border/80 bg-surface-card p-5 sm:p-6 lg:p-5 xl:p-6 transition-all duration-500 hover:border-gold/70 hover:shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
               >
                 <div>
                   {/* Vaulted  Image Container */}
-                  <div className="relative aspect-[4/3] w-full overflow-hidden border border-[#E6DAC6] bg-[#F6F2E9] mb-6">
+                  <div className="relative aspect-[4/3] w-full overflow-hidden border border-border/80 bg-surface mb-6">
                     <Image
                       src={item.image}
                       alt={item.imageAlt}
@@ -102,35 +102,35 @@ export default function WhatIDoSection() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute top-3 left-3 rounded-full border border-[#C8A35B]/40 bg-[#FBF8F1]/90 backdrop-blur-xs px-3 py-1 text-[9px] font-semibold tracking-[0.25em] uppercase text-[#C8A35B]">
+                    <div className="absolute top-3 left-3 rounded-full border border-gold/40 bg-background/90 backdrop-blur-xs px-3 py-1 text-[9px] font-semibold tracking-[0.25em] uppercase text-gold">
                       {item.category}
                     </div>
                   </div>
 
                   {/* Eyebrow & Number */}
-                  <div className="flex items-center justify-between text-[10px] font-semibold uppercase tracking-[0.3em] text-[#C8A35B] mb-2">
+                  <div className="flex items-center justify-between text-[10px] font-semibold uppercase tracking-[0.3em] text-gold mb-2">
                     <span>SPECIALIZATION</span>
-                    <span className="font-serif text-lg font-light text-[#C8A35B]/60">
+                    <span className="font-serif text-lg font-light text-gold/60">
                       {item.number}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-serif text-lg font-normal tracking-tight text-[#1A1714] sm:text-xl lg:text-lg xl:text-xl leading-snug transition-colors group-hover:text-[#C8A35B]">
+                  <h3 className="font-serif text-lg font-normal tracking-tight text-foreground sm:text-xl lg:text-lg xl:text-xl leading-snug transition-colors group-hover:text-gold">
                     {item.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="mt-3 text-xs leading-relaxed text-[#6E665C] font-light">
+                  <p className="mt-3 text-xs leading-relaxed text-muted font-light">
                     {item.description}
                   </p>
                 </div>
 
                 {/* Bottom CTA Link */}
-                <div className="mt-6 pt-4 border-t border-[#E6DAC6]">
-                  <div className="inline-flex items-center justify-between w-full text-[11px] font-semibold uppercase tracking-[0.25em] text-[#1A1714] transition-colors group-hover:text-[#C8A35B]">
+                <div className="mt-6 pt-4 border-t border-border/60">
+                  <div className="inline-flex items-center justify-between w-full text-[11px] font-semibold uppercase tracking-[0.25em] text-foreground transition-colors group-hover:text-gold">
                     <span>Explore</span>
-                    <div className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-[#C8A35B]/50 bg-[#F6F2E9] text-[#1A1714] transition-all duration-300 group-hover:border-[#C8A35B] group-hover:bg-[#C8A35B] group-hover:text-white">
+                    <div className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-gold/50 bg-background text-foreground transition-all duration-300 group-hover:border-gold group-hover:bg-gold group-hover:text-white">
                       <ArrowUpRight className="h-3.5 w-3.5" />
                     </div>
                   </div>

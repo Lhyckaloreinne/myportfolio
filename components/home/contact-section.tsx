@@ -48,7 +48,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="w-full bg-obsidian text-white py-24 md:py-32 lg:py-36 relative overflow-hidden"
+      className="w-full bg-background text-foreground py-24 md:py-32 lg:py-36 relative overflow-hidden border-t border-border/80"
     >
       {/* Background Decorative Metallic Glows */}
       <div className="pointer-events-none absolute -left-40 top-1/4 h-[600px] w-[600px] rounded-full bg-gold/10 blur-3xl" />
@@ -67,11 +67,11 @@ export default function ContactSection() {
                 </span>
               </div>
 
-              <h2 className="font-serif text-4xl font-normal tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.05]">
+              <h2 className="font-serif text-4xl font-normal tracking-tight text-foreground sm:text-5xl lg:text-6xl leading-[1.05]">
                 Let&apos;s build something <span className="font-serif italic text-gold">extraordinary</span>.
               </h2>
 
-              <p className="mt-6 text-base leading-relaxed text-neutral-400 font-light lg:text-lg">
+              <p className="mt-6 text-base leading-relaxed text-muted font-light lg:text-lg">
                 I am currently open to full-time opportunities, design collaborations, and strategic digital operations roles.
               </p>
             </div>
@@ -87,29 +87,29 @@ export default function ContactSection() {
                     href={contact.href}
                     target={contact.href.startsWith("http") ? "_blank" : undefined}
                     rel={contact.href.startsWith("http") ? "noreferrer" : undefined}
-                    className="group flex items-center justify-between rounded-2xl border border-obsidian-border bg-obsidian-card p-5 transition-all duration-300 hover:border-gold hover:bg-obsidian-card/80"
+                    className="group flex items-center justify-between rounded-2xl border border-border bg-surface-card p-5 transition-all duration-300 hover:border-gold hover:bg-surface-card/80"
                   >
                     <div className="flex items-center gap-4">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-gold/30 bg-gold/10 text-gold group-hover:bg-gold group-hover:text-obsidian transition-colors">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-gold/30 bg-gold/10 text-gold group-hover:bg-gold group-hover:text-background transition-colors">
                         <Icon className="h-4 w-4" aria-hidden={true} />
                       </div>
                       <div>
                         <span className="block text-[10px] font-semibold uppercase tracking-[0.35em] text-gold">
                           {contact.label}
                         </span>
-                        <span className="mt-1 block text-sm font-medium text-white group-hover:text-gold transition-colors">
+                        <span className="mt-1 block text-sm font-medium text-foreground group-hover:text-gold transition-colors">
                           {contact.value}
                         </span>
                       </div>
                     </div>
-                    <ArrowUpRight className="h-4 w-4 text-neutral-500 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-gold" />
+                    <ArrowUpRight className="h-4 w-4 text-muted transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-gold" />
                   </a>
                 );
               })}
             </div>
           </div>
 
-          {/* Right Column: Vogue Dark Form ("JOIN THE MASTERMIND") */}
+          {/* Right Column: Vogue Form */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -117,19 +117,19 @@ export default function ContactSection() {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-7"
           >
-            <div className="rounded-3xl border border-gold/30 bg-obsidian-card p-8 md:p-12 shadow-2xl relative">
+            <div className="rounded-3xl border border-gold/30 bg-surface-card p-8 md:p-12 shadow-xl relative">
               <span className="block text-[10px] font-semibold uppercase tracking-[0.4em] text-gold mb-2">
                 DIRECT INQUIRY FORM
               </span>
-              <h3 className="font-serif text-2xl font-normal tracking-tight text-white lg:text-3xl mb-8">
+              <h3 className="font-serif text-2xl font-normal tracking-tight text-foreground lg:text-3xl mb-8">
                 Send a Message
               </h3>
 
               {submitted ? (
                 <div className="flex flex-col items-center justify-center py-12 text-center">
                   <CheckCircle2 className="h-16 w-16 text-gold mb-4" />
-                  <h4 className="font-serif text-2xl font-normal text-white">Message Received</h4>
-                  <p className="mt-2 text-sm text-neutral-400 max-w-md">
+                  <h4 className="font-serif text-2xl font-normal text-foreground">Message Received</h4>
+                  <p className="mt-2 text-sm text-muted max-w-md">
                     Thank you for reaching out. I will review your message and respond promptly.
                   </p>
                 </div>
@@ -137,7 +137,7 @@ export default function ContactSection() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid gap-6 sm:grid-cols-2">
                     <div>
-                      <label htmlFor="name" className="block text-[11px] font-semibold uppercase tracking-[0.3em] text-neutral-400 mb-2">
+                      <label htmlFor="name" className="block text-[11px] font-semibold uppercase tracking-[0.3em] text-muted mb-2">
                         Your Name
                       </label>
                       <input
@@ -145,11 +145,11 @@ export default function ContactSection() {
                         id="name"
                         required
                         placeholder="e.g. Jane Doe"
-                        className="w-full rounded-xl border border-obsidian-border bg-obsidian/70 px-4 py-3.5 text-sm text-white placeholder-neutral-600 focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold transition-colors"
+                        className="w-full rounded-xl border border-border bg-background/70 px-4 py-3.5 text-sm text-foreground placeholder-muted/60 focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold transition-colors"
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-[11px] font-semibold uppercase tracking-[0.3em] text-neutral-400 mb-2">
+                      <label htmlFor="email" className="block text-[11px] font-semibold uppercase tracking-[0.3em] text-muted mb-2">
                         Email Address
                       </label>
                       <input
@@ -157,13 +157,13 @@ export default function ContactSection() {
                         id="email"
                         required
                         placeholder="jane@example.com"
-                        className="w-full rounded-xl border border-obsidian-border bg-obsidian/70 px-4 py-3.5 text-sm text-white placeholder-neutral-600 focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold transition-colors"
+                        className="w-full rounded-xl border border-border bg-background/70 px-4 py-3.5 text-sm text-foreground placeholder-muted/60 focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold transition-colors"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-[11px] font-semibold uppercase tracking-[0.3em] text-neutral-400 mb-2">
+                    <label htmlFor="subject" className="block text-[11px] font-semibold uppercase tracking-[0.3em] text-muted mb-2">
                       Subject / Project Scope
                     </label>
                     <input
@@ -171,12 +171,12 @@ export default function ContactSection() {
                       id="subject"
                       required
                       placeholder="e.g. Full-Time Opportunity / Design Collaboration"
-                      className="w-full rounded-xl border border-obsidian-border bg-obsidian/70 px-4 py-3.5 text-sm text-white placeholder-neutral-600 focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold transition-colors"
+                      className="w-full rounded-xl border border-border bg-background/70 px-4 py-3.5 text-sm text-foreground placeholder-muted/60 focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold transition-colors"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-[11px] font-semibold uppercase tracking-[0.3em] text-neutral-400 mb-2">
+                    <label htmlFor="message" className="block text-[11px] font-semibold uppercase tracking-[0.3em] text-muted mb-2">
                       Message
                     </label>
                     <textarea
@@ -184,7 +184,7 @@ export default function ContactSection() {
                       rows={5}
                       required
                       placeholder="Tell me about your organization or project goals..."
-                      className="w-full rounded-xl border border-obsidian-border bg-obsidian/70 px-4 py-3.5 text-sm text-white placeholder-neutral-600 focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold transition-colors resize-none"
+                      className="w-full rounded-xl border border-border bg-background/70 px-4 py-3.5 text-sm text-foreground placeholder-muted/60 focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold transition-colors resize-none"
                     />
                   </div>
 

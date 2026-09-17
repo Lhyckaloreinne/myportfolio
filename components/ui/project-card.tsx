@@ -18,7 +18,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const year = frontmatter.year;
 
   return (
-    <div className="group flex flex-col h-full rounded-2xl border border-[#e5ddd3] bg-[#faf8f5] p-5 sm:p-6 transition-all duration-300 hover:border-[#c5a059]/50 hover:shadow-lg hover:shadow-[#c5a059]/5">
+    <div className="group flex flex-col h-full rounded-2xl border border-border bg-surface-card p-5 sm:p-6 transition-all duration-300 hover:border-gold/50 hover:shadow-lg hover:shadow-gold/5">
       {/* Interface Preview Frame */}
       <div className="mb-6 w-full">
         <ProjectPreview
@@ -33,18 +33,18 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div>
           {/* Category / Platform Tag & Year */}
           <div className="flex items-center justify-between gap-2 mb-3">
-            <span className="inline-block text-[10px] font-semibold tracking-[0.2em] uppercase text-[#c5a059]">
+            <span className="inline-block text-[10px] font-semibold tracking-[0.2em] uppercase text-gold">
               {projectType}
             </span>
             {year && (
-              <span className="text-[11px] font-mono text-[#7e756b]/70">
+              <span className="text-[11px] font-mono text-muted/70">
                 {year}
               </span>
             )}
           </div>
 
           {/* Project Title */}
-          <h3 className="font-serif text-2xl sm:text-3xl font-normal text-[#121110] leading-tight mb-3 transition-colors duration-200 group-hover:text-[#c5a059]">
+          <h3 className="font-serif text-2xl sm:text-3xl font-normal text-foreground leading-tight mb-3 transition-colors duration-200 group-hover:text-gold">
             <Link href={`/ui-ux/${slug}`} className="focus:outline-none">
               {frontmatter.title}
             </Link>
@@ -52,26 +52,26 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
           {/* Short Project Descriptor */}
           {summary && (
-            <p className="text-xs sm:text-sm text-[#7e756b] font-light leading-relaxed line-clamp-3 mb-6">
+            <p className="text-xs sm:text-sm text-muted font-light leading-relaxed line-clamp-3 mb-6">
               {summary}
             </p>
           )}
         </div>
 
         {/* Footer: Tools & Case Study Link */}
-        <div className="pt-4 border-t border-[#e5ddd3]/60 flex items-center justify-between gap-4 mt-auto">
+        <div className="pt-4 border-t border-border/60 flex items-center justify-between gap-4 mt-auto">
           {/* Tools / Tags */}
           <div className="flex flex-wrap gap-1.5 max-w-[70%]">
             {tools.slice(0, 3).map((tool, idx) => (
               <span
                 key={idx}
-                className="rounded-full border border-[#e5ddd3] bg-[#f4efea] px-2.5 py-0.5 text-[10px] font-medium text-[#7e756b]"
+                className="rounded-full border border-border bg-surface px-2.5 py-0.5 text-[10px] font-medium text-muted"
               >
                 {tool}
               </span>
             ))}
             {tools.length > 3 && (
-              <span className="rounded-full border border-[#e5ddd3] bg-[#f4efea] px-2 py-0.5 text-[10px] font-medium text-[#7e756b]">
+              <span className="rounded-full border border-border bg-surface px-2 py-0.5 text-[10px] font-medium text-muted">
                 +{tools.length - 3}
               </span>
             )}
@@ -80,7 +80,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {/* View Case Study CTA Link */}
           <Link
             href={`/ui-ux/${slug}`}
-            className="inline-flex items-center gap-1 text-xs font-semibold text-[#121110] tracking-wider uppercase transition-colors duration-200 group-hover:text-[#c5a059]"
+            className="inline-flex items-center gap-1 text-xs font-semibold text-foreground tracking-wider uppercase transition-colors duration-200 group-hover:text-gold"
           >
             <span>Explore</span>
             <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

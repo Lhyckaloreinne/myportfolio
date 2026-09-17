@@ -37,16 +37,16 @@ export default async function UiUxPage() {
       <div className="space-y-20 md:space-y-28">
         {/* WEB DESIGN SECTION */}
         <section className="space-y-8">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-[#e5ddd3] pb-5">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-border pb-5">
             <div>
-              <span className="text-[10px] font-semibold tracking-[0.25em] uppercase text-[#c5a059] block mb-1">
+              <span className="text-[10px] font-semibold tracking-[0.25em] uppercase text-gold block mb-1">
                 01 / CATEGORY
               </span>
-              <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-normal text-[#121110]">
+              <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-normal text-foreground">
                 Web Design & Applications
               </h2>
             </div>
-            <p className="text-xs tracking-widest text-[#7e756b] uppercase font-light">
+            <p className="text-xs tracking-widest text-muted uppercase font-light">
               2 Showcase Projects
             </p>
           </div>
@@ -61,16 +61,16 @@ export default async function UiUxPage() {
 
         {/* MOBILE APP DESIGN SECTION */}
         <section className="space-y-8">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-[#e5ddd3] pb-5">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-border pb-5">
             <div>
-              <span className="text-[10px] font-semibold tracking-[0.25em] uppercase text-[#c5a059] block mb-1">
+              <span className="text-[10px] font-semibold tracking-[0.25em] uppercase text-gold block mb-1">
                 02 / CATEGORY
               </span>
-              <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-normal text-[#121110]">
+              <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-normal text-foreground">
                 Mobile Application Design
               </h2>
             </div>
-            <p className="text-xs tracking-widest text-[#7e756b] uppercase font-light">
+            <p className="text-xs tracking-widest text-muted uppercase font-light">
               3 Showcase Projects
             </p>
           </div>

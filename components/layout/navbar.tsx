@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import ThemeToggle from "@/components/theme/theme-toggle";
 
 interface NavItem {
   name: string;
@@ -55,7 +56,7 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <nav
           aria-label="Main Navigation"
-          className="hidden items-center gap-10 md:flex"
+          className="hidden items-center gap-8 md:flex"
         >
           <ul className="flex items-center gap-8">
             {navItems.map((item) => {
@@ -84,25 +85,32 @@ export default function Navbar() {
             })}
           </ul>
 
-          {/* Contact CTA Button */}
-          <Link
-            href="/#contact"
-            className="inline-flex items-center justify-center rounded-full border border-gold/70 bg-transparent px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.3em] text-foreground transition-all duration-300 hover:bg-gold hover:text-white active:scale-95 shadow-xs"
-          >
-            Get In Touch
-          </Link>
+          <div className="flex items-center gap-4">
+            <ThemeToggle />
+
+            {/* Contact CTA Button */}
+            <Link
+              href="/#contact"
+              className="inline-flex items-center justify-center rounded-full border border-gold/70 bg-transparent px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.3em] text-foreground transition-all duration-300 hover:bg-gold hover:text-white active:scale-95 shadow-xs"
+            >
+              Get In Touch
+            </Link>
+          </div>
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button
-          type="button"
-          onClick={toggleMenu}
-          aria-expanded={isOpen}
-          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
-          className="inline-flex items-center justify-center rounded-full border border-border/80 p-2.5 text-foreground transition-colors hover:border-gold hover:text-gold md:hidden"
-        >
-          {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        {/* Mobile Actions: Theme Toggle & Menu Button */}
+        <div className="flex items-center gap-3 md:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            onClick={toggleMenu}
+            aria-expanded={isOpen}
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            className="inline-flex items-center justify-center rounded-full border border-border/80 p-2.5 text-foreground transition-colors hover:border-gold hover:text-gold"
+          >
+            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation Drawer */}

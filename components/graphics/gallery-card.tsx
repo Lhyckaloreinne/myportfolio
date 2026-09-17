@@ -24,12 +24,12 @@ export default function GalleryCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-      className="group relative cursor-pointer overflow-hidden rounded-2xl border border-[#e5ddd3] bg-[#faf8f5] p-2 sm:p-2.5 transition-all duration-500 hover:border-[#c5a059] hover:shadow-xl hover:shadow-[#c5a059]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c5a059]"
+      className="group relative cursor-pointer overflow-hidden rounded-2xl border border-border bg-surface-card p-2 sm:p-2.5 transition-all duration-500 hover:border-gold hover:shadow-xl hover:shadow-gold/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
       onClick={onClick}
     >
       {/* Pure Image Container */}
       <div
-        className={`relative w-full overflow-hidden rounded-xl border border-[#e5ddd3]/60 bg-[#f4efea] ${aspectRatioClass}`}
+        className={`relative w-full overflow-hidden rounded-xl border border-border/60 bg-surface ${aspectRatioClass}`}
       >
         <Image
           src={item.src}
@@ -41,8 +41,8 @@ export default function GalleryCard({
         />
 
         {/* Minimal Hover Expand Icon */}
-        <div className="absolute inset-0 bg-[#121110]/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center">
-          <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#121110]/80 text-[#faf7f2] backdrop-blur-sm border border-[#c5a059]/60 shadow-lg transform scale-90 group-hover:scale-100 transition-transform duration-300">
+        <div className="absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center">
+          <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-background/90 text-foreground backdrop-blur-sm border border-gold/60 shadow-lg transform scale-90 group-hover:scale-100 transition-transform duration-300">
             <Maximize2 className="h-4 w-4" />
           </div>
         </div>

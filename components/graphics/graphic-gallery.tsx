@@ -40,11 +40,11 @@ export default function GraphicGallery() {
           01 — CLIENT WORK (19 Total Images: 15 Marilag + 4 BulSU)
           ======================================================== */}
       <section className="space-y-12">
-        <div className="flex items-center justify-between border-b border-[#e5ddd3] pb-4">
-          <span className="text-[10px] font-semibold tracking-[0.25em] uppercase text-[#c5a059]">
+        <div className="flex items-center justify-between border-b border-border pb-4">
+          <span className="text-[10px] font-semibold tracking-[0.25em] uppercase text-gold">
             01 / CLIENT WORK
           </span>
-          <span className="text-xs font-mono text-[#7e756b]">19 Images (15 Marilag · 4 BulSU)</span>
+          <span className="text-xs font-mono text-muted">19 Images (15 Marilag · 4 BulSU)</span>
         </div>
 
         {/* Marilag Bridal Fair (All 15 Images) */}
@@ -56,11 +56,11 @@ export default function GraphicGallery() {
 
         {/* BulSU Sambalaran (All 4 Images Visible Simultaneously) */}
         <div className="space-y-4 pt-4">
-          <div className="flex items-center justify-between border-b border-[#e5ddd3] pb-2">
-            <span className="text-[10px] font-semibold tracking-[0.25em] uppercase text-[#c5a059]">
+          <div className="flex items-center justify-between border-b border-border pb-2">
+            <span className="text-[10px] font-semibold tracking-[0.25em] uppercase text-gold">
               BULSU SAMBALARAN (ALL 4 DESIGNS)
             </span>
-            <span className="text-xs font-mono text-[#7e756b]">4 Images</span>
+            <span className="text-xs font-mono text-muted">4 Images</span>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5">
@@ -80,11 +80,11 @@ export default function GraphicGallery() {
           02 — BRANDING (1 Image)
           ======================================================== */}
       <section className="space-y-4">
-        <div className="flex items-center justify-between border-b border-[#e5ddd3] pb-2">
-          <span className="text-[10px] font-semibold tracking-[0.25em] uppercase text-[#c5a059]">
+        <div className="flex items-center justify-between border-b border-border pb-2">
+          <span className="text-[10px] font-semibold tracking-[0.25em] uppercase text-gold">
             02 / BRANDING
           </span>
-          <span className="text-xs font-mono text-[#7e756b]">1 Image</span>
+          <span className="text-xs font-mono text-muted">1 Image</span>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -95,10 +95,10 @@ export default function GraphicGallery() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="group relative cursor-pointer overflow-hidden rounded-3xl border border-[#e5ddd3] bg-[#faf8f5] p-6 transition-all duration-500 hover:border-[#c5a059] hover:shadow-xl hover:shadow-[#c5a059]/10"
+              className="group relative cursor-pointer overflow-hidden rounded-3xl border border-border bg-surface-card p-6 transition-all duration-500 hover:border-gold hover:shadow-xl hover:shadow-gold/10"
               onClick={() => openLightbox(item, BRANDING_ITEMS)}
             >
-              <div className="relative aspect-square w-full flex items-center justify-center overflow-hidden rounded-2xl border border-[#e5ddd3]/60 bg-[#faf8f5] p-6 transition-transform duration-500 group-hover:scale-102">
+              <div className="relative aspect-square w-full flex items-center justify-center overflow-hidden rounded-2xl border border-border/60 bg-surface p-6 transition-transform duration-500 group-hover:scale-102">
                 <Image
                   src={item.src}
                   alt={item.title}
@@ -107,7 +107,7 @@ export default function GraphicGallery() {
                   className="object-contain p-4 transition-transform duration-700 group-hover:scale-105"
                 />
 
-                <div className="absolute bottom-3 right-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#121110]/80 text-[#faf7f2] opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-hover:bg-[#c5a059] group-hover:text-[#121110]">
+                <div className="absolute bottom-3 right-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-background/90 text-foreground opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-hover:bg-gold group-hover:text-background">
                   <Maximize2 className="h-4 w-4" />
                 </div>
               </div>
@@ -120,11 +120,11 @@ export default function GraphicGallery() {
           03 — MARKETING COLLATERAL (3 Images)
           ======================================================== */}
       <section className="space-y-4">
-        <div className="flex items-center justify-between border-b border-[#e5ddd3] pb-2">
-          <span className="text-[10px] font-semibold tracking-[0.25em] uppercase text-[#c5a059]">
+        <div className="flex items-center justify-between border-b border-border pb-2">
+          <span className="text-[10px] font-semibold tracking-[0.25em] uppercase text-gold">
             03 / MARKETING COLLATERAL (PRODUCT CATALOG)
           </span>
-          <span className="text-xs font-mono text-[#7e756b]">3 Images</span>
+          <span className="text-xs font-mono text-muted">3 Images</span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
@@ -143,11 +143,11 @@ export default function GraphicGallery() {
           04 — ORGANIZATIONAL WORK (5 Images)
           ======================================================== */}
       <section className="space-y-4">
-        <div className="flex items-center justify-between border-b border-[#e5ddd3] pb-2">
-          <span className="text-[10px] font-semibold tracking-[0.25em] uppercase text-[#c5a059]">
+        <div className="flex items-center justify-between border-b border-border pb-2">
+          <span className="text-[10px] font-semibold tracking-[0.25em] uppercase text-gold">
             04 / ORGANIZATIONAL WORK (PUBMATS, POSTERS, LANYARDS)
           </span>
-          <span className="text-xs font-mono text-[#7e756b]">5 Images</span>
+          <span className="text-xs font-mono text-muted">5 Images</span>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-5">

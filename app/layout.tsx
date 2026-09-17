@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Cormorant_Garamond, Italiana } from "next/font/google";
 import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
+import { ThemeProvider } from "@/components/theme/theme-provider";
 import "./globals.css";
 
 const inter = Inter({
@@ -34,13 +35,33 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+(function() {
+  try {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light') {
+      document.documentElement.classList.add('light');
+    } else {
+      document.documentElement.classList.remove('light');
+    }
+  } catch (e) {}
+})();
+`,
+          }}
+        />
+      </head>
       <body
         className={`${inter.variable} ${cormorantGaramond.variable} ${italiana.variable} min-h-screen flex flex-col bg-background font-sans text-foreground antialiased selection:bg-gold/20 selection:text-foreground`}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <ThemeProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
