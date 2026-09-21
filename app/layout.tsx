@@ -26,7 +26,7 @@ const italiana = Italiana({
 export const metadata: Metadata = {
   title: "Lhycka Loreinne Sulit | Luxury Portfolio & Digital Operations",
   description:
-    "Vogue-inspired personal portfolio showcasing UI/UX Design, Front-End Engineering, Data Analytics, Graphic Design, and Digital Operations.",
+    "Personal portfolio showcasing UI/UX Design, Front-End Engineering, Data Analytics, Graphic Design, and Digital Operations.",
 };
 
 export default function RootLayout({

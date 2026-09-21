@@ -80,7 +80,7 @@ export default function HeroSection() {
               {/* Vaulted Arch Frame (Reference 3 & Reference 1) */}
               <div className="vogue-offset-frame relative aspect-[4/5] w-full overflow-hidden arch-frame border border-gold/40 bg-surface shadow-xl">
                 <Image
-                  src="/images/lhycka_profile.JPG"
+                  src="/images/Lhycka_Pic.JPG"
                   alt="Lhycka Loreinne Sulit - IT Graduate & Digital Professional"
                   fill
                   priority

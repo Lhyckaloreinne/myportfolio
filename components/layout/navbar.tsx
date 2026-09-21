@@ -45,12 +45,12 @@ export default function Navbar() {
           onClick={closeMenu}
           className="group flex flex-col items-start focus-visible:outline-none"
         >
-          <span className="font-serif text-2xl font-semibold tracking-[0.18em] text-foreground transition-colors group-hover:text-gold lg:text-3xl">
+          <span className="font-serif text-2xl font-semibold tracking-[0.18em] text-foreground transition-colors group-hover:text-gold lg:text-2xl">
             LHYCKA LOREINNE
           </span>
-          <span className="text-[9px] font-medium uppercase tracking-[0.45em] text-gold">
-            Vogue Portfolio
-          </span>
+          {/* <span className="text-[9px] font-medium uppercase tracking-[0.45em] text-gold">
+            Personal Portfolio
+          </span> */}
         </Link>
 
         {/* Desktop Navigation */}
