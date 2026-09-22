@@ -18,7 +18,7 @@ export default function CategoryPage({
 }: CategoryPageProps) {
   return (
     <div className="w-full bg-background min-h-[70vh] py-16 md:py-24">
-      <div className="mx-auto max-w-[1400px]  px-6 lg:px-8 xl:px-12">
+      <div className="mx-auto max-w-7xl px-6 lg:px-12">
         {/* Back Navigation */}
         <div className="mb-8">
           <Link
