@@ -51,7 +51,7 @@ interface SkillGroup {
 const skillGroups: SkillGroup[] = [
   {
     number: "01",
-    title: "Front-End Development",
+    title: "Web Development",
     description:
       "Building high-performance, accessible, and responsive interfaces with structured component architecture.",
     skills: [

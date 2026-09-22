@@ -49,7 +49,7 @@ export default function Footer() {
             LHYCKA LOREINNE
           </Link>
           <p className="mt-3 text-xs font-semibold uppercase tracking-[0.45em] text-gold">
-            VOGUE PORTFOLIO · ISSUE N° 01 · 2026
+            PERSONAL PORTFOLIO · ISSUE N° 01 · 2026
           </p>
           <p className="mt-4 max-w-lg text-sm leading-relaxed text-muted font-light">
             An IT Graduate &amp; Digital Professional delivering high-precision front-end engineering, UI/UX design, data analytics, and digital operations.

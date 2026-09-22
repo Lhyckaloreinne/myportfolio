@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
@@ -22,7 +22,27 @@ const navItems: NavItem[] = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
   const pathname = usePathname();
+
+  useEffect(() => {
+    if (pathname !== "/") return;
+
+    setActiveSection("home");
+    const sections = ["about", "work", "skills", "contact"]
+      .map((id) => document.getElementById(id))
+      .filter((section): section is HTMLElement => section !== null);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleSection = entries.find((entry) => entry.isIntersecting);
+        if (visibleSection) setActiveSection(visibleSection.target.id);
+      },
+      { rootMargin: "-35% 0px -55% 0px" },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, [pathname]);
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
   const closeMenu = () => setIsOpen(false);
@@ -38,15 +58,20 @@ export default function Navbar() {
         <span>MANILA, PHILIPPINES</span>
       </div>
 
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-12">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 md:grid md:grid-cols-[1fr_auto_1fr] lg:px-12">
         {/* Brand Masthead / Logo */}
         <Link
           href="/"
           onClick={closeMenu}
-          className="group flex flex-col items-start focus-visible:outline-none"
+          className="group flex items-center gap-3 focus-visible:outline-none"
         >
-          <span className="font-serif text-2xl font-semibold tracking-[0.18em] text-foreground transition-colors group-hover:text-gold lg:text-2xl">
-            LHYCKA LOREINNE
+          <img
+            src="/logo/portfolio-logo.png"
+            alt=""
+            className="h-10 w-10 object-contain"
+          />
+         <span className="text-xs font-semibold uppercase tracking-[0.3em] text-foreground transition-colors group-hover:text-gold">
+          LHYCKA LOREINNE
           </span>
           {/* <span className="text-[9px] font-medium uppercase tracking-[0.45em] text-gold">
             Personal Portfolio
@@ -56,11 +81,14 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <nav
           aria-label="Main Navigation"
-          className="hidden items-center gap-8 md:flex"
+          className="hidden items-center gap-8 md:flex md:justify-self-center"
         >
           <ul className="flex items-center gap-8">
             {navItems.map((item) => {
-              const isActive = pathname === item.href || (item.href.startsWith("/#") && pathname === "/");
+              const section = item.href === "/" ? "home" : item.href.slice(2);
+              const isActive = pathname === "/"
+                ? activeSection === section
+                : pathname === item.href;
               return (
                 <li key={item.href}>
                   <Link
@@ -85,18 +113,19 @@ export default function Navbar() {
             })}
           </ul>
 
-          <div className="flex items-center gap-4">
-            <ThemeToggle />
-
-            {/* Contact CTA Button */}
-            <Link
-              href="/#contact"
-              className="inline-flex items-center justify-center rounded-full border border-gold/70 bg-transparent px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.3em] text-foreground transition-all duration-300 hover:bg-gold hover:text-white active:scale-95 shadow-xs"
-            >
-              Get In Touch
-            </Link>
-          </div>
         </nav>
+
+        <div className="hidden items-center justify-self-end gap-4 md:flex">
+          <ThemeToggle />
+
+          {/* Contact CTA Button */}
+          <Link
+            href="/#contact"
+            className="inline-flex items-center justify-center rounded-full border border-gold/70 bg-transparent px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.3em] text-foreground transition-all duration-300 hover:bg-gold hover:text-white active:scale-95 shadow-xs"
+          >
+            Get In Touch
+          </Link>
+        </div>
 
         {/* Mobile Actions: Theme Toggle & Menu Button */}
         <div className="flex items-center gap-3 md:hidden">
