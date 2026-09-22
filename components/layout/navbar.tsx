@@ -99,7 +99,7 @@ export default function Navbar() {
                     {isActive && (
                       <motion.span
                         layoutId="activeNavIndicator"
-                        className="absolute bottom-0 left-0 h-[2px] w-full bg-gold"
+                        className="absolute bottom-0 left-0 h-0.5 w-full bg-gold"
                         transition={{
                           type: "spring",
                           stiffness: 380,

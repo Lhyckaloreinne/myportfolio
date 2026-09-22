@@ -51,8 +51,8 @@ export default function ContactSection() {
       className="w-full bg-background text-foreground py-24 md:py-32 lg:py-36 relative overflow-hidden border-t border-border/80"
     >
       {/* Background Decorative Metallic Glows */}
-      <div className="pointer-events-none absolute -left-40 top-1/4 h-[600px] w-[600px] rounded-full bg-gold/10 blur-3xl" />
-      <div className="pointer-events-none absolute -right-40 bottom-10 h-[600px] w-[600px] rounded-full bg-gold/10 blur-3xl" />
+      <div className="pointer-events-none absolute -left-40 top-1/4 h-150 w-150 rounded-full bg-gold/10 blur-3xl" />
+      <div className="pointer-events-none absolute -right-40 bottom-10 h-150 w-150 rounded-full bg-gold/10 blur-3xl" />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-12 relative z-10">
         <div className="grid gap-16 lg:grid-cols-12 lg:gap-20">

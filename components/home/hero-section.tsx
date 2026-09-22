@@ -9,13 +9,13 @@ export default function HeroSection() {
   return (
     <section className="relative w-full overflow-hidden bg-background py-16 md:py-24 lg:py-28">
       {/* Background Decorative Gold Accent Rays */}
-      <div className="pointer-events-none absolute -right-32 -top-32 h-[500px] w-[500px] rounded-full bg-gold/5 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-32 -left-32 h-[500px] w-[500px] rounded-full bg-gold/5 blur-3xl" />
+      <div className="pointer-events-none absolute -right-32 -top-32 h-125 w-125 rounded-full bg-gold/5 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 -left-32 h-125 w-125 rounded-full bg-gold/5 blur-3xl" />
 
      {/* Background Decorative Metallic Glows */}
-      <div className="pointer-events-none absolute -left-40 top-1/4 h-[600px] w-[600px] rounded-full bg-gold/10 blur-3xl" />
-      <div className="pointer-events-none absolute -right-40 bottom-10 h-[600px] w-[600px] rounded-full bg-gold/10 blur-3xl" />
-      
+      <div className="pointer-events-none absolute -left-40 top-1/4 h-150600px] rounded-full bg-gold/10 blur-3xl" />
+      <div className="pointer-events-none absolute -right-40 bottom-10 h-150 w-150 rounded-full bg-gold/10 blur-3xl" />
+
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
           
@@ -82,7 +82,7 @@ export default function HeroSection() {
           >
             <div className="relative mx-auto w-full max-w-md">
               {/* Vaulted Arch Frame (Reference 3 & Reference 1) */}
-              <div className="vogue-offset-frame relative aspect-[4/5] w-full overflow-hidden arch-frame border border-gold/40 bg-surface shadow-xl">
+              <div className="vogue-offset-frame relative aspect-4/5 w-full overflow-hidden arch-frame border border-gold/40 bg-surface shadow-xl">
                 <Image
                   src="/images/Lhycka_Pic.JPG"
                   alt="Lhycka Loreinne Sulit - IT Graduate & Digital Professional"
@@ -93,7 +93,7 @@ export default function HeroSection() {
                 />
 
                 {/* Subtle Luxury Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-linear-to-t from-foreground/40 via-transparent to-transparent opacity-60" />
               </div>
 
               {/* Floating Vogue Glass Badge */}
