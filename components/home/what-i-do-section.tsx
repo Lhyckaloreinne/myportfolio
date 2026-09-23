@@ -29,7 +29,7 @@ const specializations: SpecializationItem[] = [
   },
   {
     number: "02",
-    title: "Data Analytics & Storytelling",
+    title: "Data Analytics & Visualization",
     category: "ANALYTICS & INSIGHTS",
     description:
       "Transforming raw datasets into compelling visual dashboards, structured reporting, and actionable business insights.",

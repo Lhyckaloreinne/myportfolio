@@ -16,9 +16,11 @@ const leadershipMoments = [
 
 const graduationImages = [
   "/images/graduation/1.JPG",
-  "/images/graduation/2.JPG",
-  "/images/graduation/3.JPG",
-  "/images/graduation/4.JPG",
+  "/images/graduation/2.jpg",
+  "/images/graduation/3..JPG",
+  "/images/graduation/4.jpg",
+  
+  
 ];
 
 export default function EducationSection() {
@@ -88,7 +90,7 @@ export default function EducationSection() {
       <div className="relative pb-16">
         <span className="absolute left-[-2.05rem] top-1 h-3 w-3 rounded-full border-2 border-gold bg-background md:left-[-2.65rem]" />
 
-        <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+        <span className="text-xs font-semibold uppercase tracking-[0.3em] text-muted">
           2022–2026 · Bulacan State University
         </span>
 
@@ -127,9 +129,15 @@ export default function EducationSection() {
           Secondary Education
         </p>
 
-        <p className="mt-1 text-sm text-muted">
-          Valedictorian · With High Honors
+        <p className="mt-3 max-w-3xl text-sm font-light leading-relaxed text-muted">
+          Comprehensive secondary education focused on academic development, critical thinking, personal growth, collaboration, and preparation for higher education and future career opportunities.
         </p>
+<span className="mt-6 inline-flex border border-gold/60 bg-gold/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-gold-dark">
+          Valedictorian
+        </span>
+        {/* <p className="mt-1 text-sm text-muted">
+          Valedictorian · With High Honors
+        </p> */}
       </div>
     </div>
 
