@@ -221,15 +221,14 @@ export default function EducationSection() {
 
        {activeTab === "LEADERSHIP & INVOLVEMENT" && (
   <div>
-    {/* Header */}
     <div className="max-w-2xl">
       <h3 className="font-serif text-3xl text-foreground">
-        Leadership &amp; Involvement
+        LEADERSHIP &amp; INVOLVEMENT
       </h3>
 
-      <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
+      {/* <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
         Roles that gave me opportunities to contribute, coordinate, and work with others.
-      </p>
+      </p> */}
     </div>
 
     {/* Organization Directory */}
@@ -254,7 +253,7 @@ export default function EducationSection() {
             2024–2025
           </p>
 
-          <h4 className="font-serif text-xl text-foreground">
+          <h4 className="font-serif text-2xl text-foreground">
             POSHED
           </h4>
 
@@ -265,7 +264,7 @@ export default function EducationSection() {
 
         {/* Role */}
         <div className="text-right">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-foreground">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">
             Secretary
           </p>
           <p className="mt-1 text-xs text-muted">
@@ -289,11 +288,11 @@ export default function EducationSection() {
 
         {/* Organization */}
         <div>
-          <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-muted">
+          <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-gold">
             2024–2025
           </p>
 
-          <h4 className="font-serif text-xl text-foreground">
+          <h4 className="font-serif text-2xl text-foreground">
             Rotaract Club
           </h4>
 
@@ -304,7 +303,7 @@ export default function EducationSection() {
 
         {/* Role */}
         <div className="text-right">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-foreground">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">
             Secretary
           </p>
           <p className="mt-1 text-xs text-muted">
@@ -328,11 +327,11 @@ export default function EducationSection() {
 
         {/* Organization */}
         <div>
-          <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-muted">
+          <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-gold">
             2023–2024
           </p>
 
-          <h4 className="font-serif text-xl text-foreground">
+          <h4 className="font-serif text-2xl text-foreground">
             POSHED
           </h4>
 
@@ -343,7 +342,7 @@ export default function EducationSection() {
 
         {/* Role */}
         <div className="text-right">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-foreground">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">
             Treasurer
           </p>
           <p className="mt-1 text-xs text-muted">
@@ -367,11 +366,11 @@ export default function EducationSection() {
 
         {/* Organization */}
         <div>
-          <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-muted">
+          <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-gold">
             2021–2022
           </p>
 
-          <h4 className="font-serif text-xl text-foreground">
+          <h4 className="font-serif text-2xl text-foreground">
             Supreme Student Government
           </h4>
 
@@ -382,7 +381,7 @@ export default function EducationSection() {
 
         {/* Role */}
         <div className="text-right">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-foreground">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">
             President
           </p>
           <p className="mt-1 text-xs text-muted">

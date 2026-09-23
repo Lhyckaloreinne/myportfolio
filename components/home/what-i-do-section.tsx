@@ -19,7 +19,7 @@ interface SpecializationItem {
 const specializations: SpecializationItem[] = [
   {
     number: "01",
-    title: "UI/UX Design & Front-End Development",
+    title: "UI/UX Design & Web Development",
     category: "DESIGN & ENGINEERING",
     description:
       "Crafting intuitive user journeys, wireframes, prototypes, and bringing designs to life through clean, responsive front-end development.",
@@ -102,7 +102,7 @@ export default function WhatIDoSection() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute top-3 left-3 rounded-full border border-gold/40 bg-background/90 backdrop-blur-xs px-3 py-1 text-[9px] font-semibold tracking-[0.25em] uppercase text-gold">
+                    <div className="absolute top-3 left-3 rounded-full border border-gold/40 bg-background/90 backdrop-blur-xs px-3 py-1 text-[9px] font-semibold tracking-[0.25em] uppercase text-white">
                       {item.category}
                     </div>
                   </div>
@@ -120,10 +120,10 @@ export default function WhatIDoSection() {
                     {item.title}
                   </h3>
 
-                  {/* Description */}
+                  {/* Description
                   <p className="mt-3 text-xs leading-relaxed text-muted font-light">
                     {item.description}
-                  </p>
+                  </p> */}
                 </div>
 
                 {/* Bottom CTA Link */}
