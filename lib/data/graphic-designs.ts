@@ -48,24 +48,7 @@ export const MARILAG_ITEMS: GraphicItem[] = [
     src: "/graphics/01-Client Work/Marilag_Bridal_Fair/Promo Poster/JN Styling.png",
     aspectRatio: "portrait",
   },
-  {
-    id: "marilag-promo-jullianne",
-    title: "Jullianne's Catering",
-    category: "Client Work",
-    subCategory: "Promo Posters",
-    project: "Marilag Bridal Fair",
-    src: "/graphics/01-Client Work/Marilag_Bridal_Fair/Promo Poster/Jullianne's Catering.png",
-    aspectRatio: "portrait",
-  },
-  {
-    id: "marilag-promo-new-town",
-    title: "New Town Events Ph",
-    category: "Client Work",
-    subCategory: "Promo Posters",
-    project: "Marilag Bridal Fair",
-    src: "/graphics/01-Client Work/Marilag_Bridal_Fair/Promo Poster/New Town Events Ph.png",
-    aspectRatio: "portrait",
-  },
+  
   {
     id: "marilag-promo-route-95",
     title: "Route 95 Diner",
@@ -75,15 +58,7 @@ export const MARILAG_ITEMS: GraphicItem[] = [
     src: "/graphics/01-Client Work/Marilag_Bridal_Fair/Promo Poster/Route 95 Diner.png",
     aspectRatio: "portrait",
   },
-  {
-    id: "marilag-promo-spheres-flares",
-    title: "Spheres and Flares",
-    category: "Client Work",
-    subCategory: "Promo Posters",
-    project: "Marilag Bridal Fair",
-    src: "/graphics/01-Client Work/Marilag_Bridal_Fair/Promo Poster/Spheres and Flares.png",
-    aspectRatio: "portrait",
-  },
+ 
 
   // Designers Solo Photos
   {
@@ -122,33 +97,7 @@ export const MARILAG_ITEMS: GraphicItem[] = [
     src: "/graphics/01-Client Work/Marilag_Bridal_Fair/Designers Solo Photos/Manny.png",
     aspectRatio: "portrait",
   },
-  {
-    id: "marilag-designer-paolo",
-    title: "Paolo",
-    category: "Client Work",
-    subCategory: "Designers Solo",
-    project: "Marilag Bridal Fair",
-    src: "/graphics/01-Client Work/Marilag_Bridal_Fair/Designers Solo Photos/Paolo.png",
-    aspectRatio: "portrait",
-  },
-  {
-    id: "marilag-designer-tammy",
-    title: "Tammy",
-    category: "Client Work",
-    subCategory: "Designers Solo",
-    project: "Marilag Bridal Fair",
-    src: "/graphics/01-Client Work/Marilag_Bridal_Fair/Designers Solo Photos/Tammy.png",
-    aspectRatio: "portrait",
-  },
-  {
-    id: "marilag-designer-vince",
-    title: "Vince",
-    category: "Client Work",
-    subCategory: "Designers Solo",
-    project: "Marilag Bridal Fair",
-    src: "/graphics/01-Client Work/Marilag_Bridal_Fair/Designers Solo Photos/Vince.png",
-    aspectRatio: "portrait",
-  },
+ 
 ];
 
 export const BULSU_ITEMS: GraphicItem[] = [

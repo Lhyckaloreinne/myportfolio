@@ -133,7 +133,7 @@ export default function GraphicGallery() {
               key={item.id}
               item={item}
               onClick={() => openLightbox(item, MARKETING_ITEMS)}
-              aspectRatioClass="aspect-[4/3] sm:aspect-[16/10]"
+              aspectRatioClass="aspect-[3/4]"
             />
           ))}
         </div>
@@ -151,15 +151,16 @@ export default function GraphicGallery() {
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-5">
-          {ORGANIZATIONAL_ITEMS.map((item) => (
-            <GalleryCard
-              key={item.id}
-              item={item}
-              onClick={() => openLightbox(item, ORGANIZATIONAL_ITEMS)}
-              aspectRatioClass={item.aspectRatio === "square" ? "aspect-square" : "aspect-[3/4]"}
-            />
-          ))}
-        </div>
+  {ORGANIZATIONAL_ITEMS.map((item) => (
+    <GalleryCard
+      key={item.id}
+      item={item}
+      onClick={() => openLightbox(item, ORGANIZATIONAL_ITEMS)}
+      aspectRatioClass="aspect-[4/3]"
+      imageFit="cover"
+    />
+  ))}
+</div>
       </section>
 
       {/* Global Interactive Image Lightbox */}

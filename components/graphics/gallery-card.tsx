@@ -10,6 +10,7 @@ interface GalleryCardProps {
   onClick: () => void;
   aspectRatioClass?: string;
   priority?: boolean;
+  imageFit?: "contain" | "cover";
 }
 
 export default function GalleryCard({
@@ -17,6 +18,7 @@ export default function GalleryCard({
   onClick,
   aspectRatioClass = "aspect-[3/4]",
   priority = false,
+  imageFit = "contain",
 }: GalleryCardProps) {
   return (
     <motion.div
@@ -36,7 +38,7 @@ export default function GalleryCard({
           alt={item.title}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+          className={`${imageFit === "cover" ? "object-cover" : "object-contain"} transition-transform duration-700 ease-out group-hover:scale-105`}
           priority={priority}
         />
 
