@@ -1,49 +1,60 @@
-**# TDS Level Monitoring System Metadata**
+---
+order: 1
+previews:
+      - "/projects/Development/TDS Level Monitoring System/alerts.png"
+      - "/projects/Development/TDS Level Monitoring System/dashboard 2.png"
+      - "/projects/Development/TDS Level Monitoring System/Dashboard.png"
+      - "/projects/Development/TDS Level Monitoring System/forecasting.png"
+      - "/projects/Development/TDS Level Monitoring System/Login.png"
+      - "/projects/Development/TDS Level Monitoring System/notifications.png"
+      - "/projects/Development/TDS Level Monitoring System/profile.png"
+      - "/projects/Development/TDS Level Monitoring System/reports.png"
+      - "/projects/Development/TDS Level Monitoring System/user management.png"
+---
 
-\> This document contains the factual information for the TDS Level Monitoring System project.
+# TDS Level Monitoring System Metadata
+> This document contains the factual information for the TDS Level Monitoring System project.
 
-\>
+>
 
-\> It serves as the primary source of truth for AI-assisted portfolio generation.
+> It serves as the primary source of truth for AI-assisted portfolio generation.
 
-\>
+>
 
-\> The UI/UX Case Study Template defines the presentation structure, while this document provides the project-specific content.
+> The UI/UX Case Study Template defines the presentation structure, while this document provides the project-specific content.
 
-**---**
+---
 
-**# Project Information**
+# Project Information
+| Item | Value |
 
-\| Item | Value |
+|------|------|
 
-\|------|------|
+| Project Title | TDS Level Monitoring System |
 
-\| Project Title | TDS Level Monitoring System |
+| Category | Web Development |
 
-\| Category | Web Development |
+| Project Type | IoT-Based Web Monitoring System |
 
-\| Project Type | IoT-Based Web Monitoring System |
+| Status | Completed / Capstone Project |
 
-\| Status | Completed / Capstone Project |
+| Year | [2026] |
 
-\| Year | [2026] |
+| Duration | [Add Duration] |
 
-\| Duration | [Add Duration] |
+| Client | Hagonoy Water District |
 
-\| Client | Hagonoy Water District |
+| Platform | Responsive Web |
 
-\| Platform | Responsive Web |
+| Role | Hardware Developer / Hardware Lead |
 
-\| Role | Hardware Developer / Hardware Lead |
+| Team | [Add Team Size] |
 
-\| Team | [Add Team Size] |
+| Tools | ESP32-WROOM-32, DFRobot TDS Sensor, DS18B20, Air780E, Firebase, React |
 
-\| Tools | ESP32-WROOM-32, DFRobot TDS Sensor, DS18B20, Air780E, Firebase, React |
+---
 
-**---**
-
-**# Project Summary**
-
+# Project Summary
 The TDS Level Monitoring System is an IoT-based web monitoring system developed as a capstone project for Hagonoy Water District.
 
 The system is designed to monitor Total Dissolved Solids (TDS) levels across 24 pumping stations and provide centralized access to monitoring information through a web-based dashboard.
@@ -54,177 +65,164 @@ The collected data is stored and retrieved through Firebase and presented throug
 
 The system serves as a monitoring aid and does not replace laboratory-based water quality testing.
 
-**---**
+---
 
-**# Business Context**
-
+# Business Context
 Hagonoy Water District operates multiple pumping stations that require monitoring of water-related conditions.
 
 The project covers 24 pumping stations and provides a centralized digital monitoring approach for accessing information from different locations.
 
 The TDS Level Monitoring System connects field-level sensing hardware with a centralized web monitoring platform, allowing authorized users to review monitoring information and identify readings that require attention.
 
-**---**
+---
 
-**# Problem Statement**
-
+# Problem Statement
 Monitoring TDS levels across multiple pumping stations can require collecting and reviewing information from different locations.
 
 The project addresses the need for a centralized monitoring system where users can:
 
-\- Monitor TDS readings
+- Monitor TDS readings
 
-\- Access information from multiple pumping stations
+- Access information from multiple pumping stations
 
-\- Receive transmitted sensor data
+- Receive transmitted sensor data
 
-\- Identify readings that reach the defined threshold
+- Identify readings that reach the defined threshold
 
-\- Review monitoring information
+- Review monitoring information
 
-\- Access centralized monitoring records
+- Access centralized monitoring records
 
-**---**
+---
 
-**# Project Goals**
+# Project Goals
+## Business Goals
+- Establish a centralized TDS monitoring system.
 
-**## Business Goals**
+- Support monitoring across 24 pumping stations.
 
-\- Establish a centralized TDS monitoring system.
+- Collect TDS readings through connected hardware.
 
-\- Support monitoring across 24 pumping stations.
+- Transmit sensor readings from pumping stations.
 
-\- Collect TDS readings through connected hardware.
+- Store monitoring data digitally.
 
-\- Transmit sensor readings from pumping stations.
+- Provide centralized access to monitoring information.
 
-\- Store monitoring data digitally.
+- Support threshold-based monitoring alerts.
 
-\- Provide centralized access to monitoring information.
+## User Experience Goals
+- Make TDS readings easy to understand.
 
-\- Support threshold-based monitoring alerts.
+- Make pumping station information easy to access.
 
-**## User Experience Goals**
+- Allow users to quickly review monitoring information.
 
-\- Make TDS readings easy to understand.
+- Clearly communicate readings that require attention.
 
-\- Make pumping station information easy to access.
+- Organize monitoring information for easier review.
 
-\- Allow users to quickly review monitoring information.
+- Provide appropriate access based on user roles.
 
-\- Clearly communicate readings that require attention.
+---
 
-\- Organize monitoring information for easier review.
+# Target Users
+## Primary Users
+- Pump Operators
 
-\- Provide appropriate access based on user roles.
+- Senior / Administrative Users
 
-**---**
-
-**# Target Users**
-
-**## Primary Users**
-
-\- Pump Operators
-
-\- Senior / Administrative Users
-
-**## User Needs**
-
+## User Needs
 Users need to:
 
-\- Monitor TDS readings
+- Monitor TDS readings
 
-\- Review pumping station information
+- Review pumping station information
 
-\- Identify stations that require attention
+- Identify stations that require attention
 
-\- Review threshold alerts
+- Review threshold alerts
 
-\- Access monitoring records
+- Access monitoring records
 
-\- Monitor multiple pumping stations through a centralized system
+- Monitor multiple pumping stations through a centralized system
 
-**---**
+---
 
-**# My Responsibilities**
-
+# My Responsibilities
 As the Hardware Developer / Hardware Lead, I was responsible for the hardware side of the system:
 
-\- Working with the ESP32-WROOM-32 integration.
+- Working with the ESP32-WROOM-32 integration.
 
-\- Integrating the DFRobot TDS Sensor.
+- Integrating the DFRobot TDS Sensor.
 
-\- Integrating the DS18B20 temperature sensor.
+- Integrating the DS18B20 temperature sensor.
 
-\- Integrating the Air780E communication module.
+- Integrating the Air780E communication module.
 
-\- Working on hardware wiring and connections.
+- Working on hardware wiring and connections.
 
-\- Supporting sensor data collection.
+- Supporting sensor data collection.
 
-\- Supporting the transmission of collected sensor data.
+- Supporting the transmission of collected sensor data.
 
-\- Testing hardware connections and sensor integration.
+- Testing hardware connections and sensor integration.
 
-\- Supporting the hardware-to-system integration.
+- Supporting the hardware-to-system integration.
 
 My responsibilities focused primarily on the hardware components and their integration. The React web dashboard and Firebase implementation were not solely my responsibility.
 
-**---**
+---
 
-**# Design Considerations**
-
+# Design Considerations
 Formal UX research was not conducted for this project.
 
 Instead, design decisions were guided by:
 
-\- System requirements
+- System requirements
 
-\- Monitoring requirements
+- Monitoring requirements
 
-\- Hardware and sensor integration
+- Hardware and sensor integration
 
-\- Multiple pumping station monitoring
+- Multiple pumping station monitoring
 
-\- TDS monitoring workflow
+- TDS monitoring workflow
 
-\- Threshold-based monitoring
+- Threshold-based monitoring
 
-\- Centralized access to monitoring information
+- Centralized access to monitoring information
 
-\- Roles and responsibilities of system users
+- Roles and responsibilities of system users
 
-**---**
+---
 
-**# Visual Direction**
-
+# Visual Direction
 The interface was designed around the needs of a monitoring system where information should be clear, organized, and easy to review.
 
 Design characteristics include:
 
-\- Clean dashboard-oriented layouts
+- Clean dashboard-oriented layouts
 
-\- Clear presentation of monitoring data
+- Clear presentation of monitoring data
 
-\- Readable TDS values
+- Readable TDS values
 
-\- Status and alert indicators
+- Status and alert indicators
 
-\- Organized information hierarchy
+- Organized information hierarchy
 
-\- Clear navigation
+- Clear navigation
 
-\- Structured data presentation
+- Structured data presentation
 
-\- Minimal interface distractions
+- Minimal interface distractions
 
-**---**
+---
 
-**# Information Architecture**
-
-**## Sitemap**
-
-\`\`\`text
+# Information Architecture
+## Sitemap
+```text
 
 TDS Level Monitoring System
 
@@ -250,13 +248,12 @@ TDS Level Monitoring System
 
 └── User Management
 
-\`\`\`
+```
 
-**---**
+---
 
-**## Primary User Flow**
-
-\`\`\`text
+## Primary User Flow
+```text
 
 Pumping Station
 
@@ -300,46 +297,40 @@ TDS Threshold Check
 
 Alert / Notification
 
-\`\`\`
+```
 
-**---**
+---
 
-**# Key Design Decisions**
-
-**## Centralized Monitoring**
-
+# Key Design Decisions
+## Centralized Monitoring
 Reason:
 
 Provide users with a centralized platform for accessing monitoring information from multiple pumping stations.
 
-**---**
+---
 
-**## Clear TDS Monitoring**
-
+## Clear TDS Monitoring
 Reason:
 
 Make TDS readings easy to identify and review as one of the primary monitoring values.
 
-**---**
+---
 
-**## Threshold-Based Alerts**
-
+## Threshold-Based Alerts
 Reason:
 
 Use the defined 600 ppm TDS threshold to identify readings that require attention within the monitoring system.
 
-**---**
+---
 
-**## Role-Based Access**
-
+## Role-Based Access
 Reason:
 
 Provide different system access and functions according to the user's role and responsibilities.
 
-**---**
+---
 
-**## Hardware-to-Web Integration**
-
+## Hardware-to-Web Integration
 Reason:
 
 Connect field-level sensors and communication hardware with the centralized web monitoring platform.
@@ -348,128 +339,113 @@ The system workflow connects the hardware and web components through:
 
 **TDS Sensor → ESP32-WROOM-32 → Air780E → Firebase → React Web Dashboard**
 
-**---**
+---
 
-**# Experience Walkthrough**
+# Experience Walkthrough
+## System Access
+### Login
+**Image**
 
-**## System Access**
-
-**### Login**
-
-**\*\*Image\*\***
-
-\`Login.png\`
+`Login.png`
 
 Purpose
 
 Provides the login interface used to access the TDS Level Monitoring System.
 
-**---**
+---
 
-**## Monitoring**
+## Monitoring
+### Dashboard
+**Image**
 
-**### Dashboard**
-
-**\*\*Image\*\***
-
-\`Dashboard.png\`
+`Dashboard.png`
 
 Purpose
 
 Provides an overview of monitoring information and system status, allowing users to quickly review important information.
 
-**---**
+---
 
-**### Dashboard 2**
+### Dashboard 2
+**Image**
 
-**\*\*Image\*\***
-
-\`dashboard 2.png\`
+`dashboard 2.png`
 
 Purpose
 
 Provides an additional dashboard view for reviewing monitoring information and system conditions.
 
-**---**
+---
 
-**### Alerts**
+### Alerts
+**Image**
 
-**\*\*Image\*\***
-
-\`alerts.png\`
+`alerts.png`
 
 Purpose
 
 Displays monitoring alerts for conditions that require user attention.
 
-**---**
+---
 
-**### Notifications**
+### Notifications
+**Image**
 
-**\*\*Image\*\***
-
-\`notifications.png\`
+`notifications.png`
 
 Purpose
 
 Provides users with notifications related to system monitoring activities and alert conditions.
 
-**---**
+---
 
-**## Data Monitoring**
+## Data Monitoring
+### Forecasting
+**Image**
 
-**### Forecasting**
-
-**\*\*Image\*\***
-
-\`forecasting.png\`
+`forecasting.png`
 
 Purpose
 
 Provides access to the forecasting functionality within the monitoring system.
 
-**---**
+---
 
-**### Reports**
+### Reports
+**Image**
 
-**\*\*Image\*\***
-
-\`reports.png\`
+`reports.png`
 
 Purpose
 
 Provides access to monitoring reports and organized system information for review.
 
-**---**
+---
 
-**## Administration & Account**
+## Administration & Account
+### User Management
+**Image**
 
-**### User Management**
-
-**\*\*Image\*\***
-
-\`user management.png\`
+`user management.png`
 
 Purpose
 
 Allows authorized users to manage system users and related administrative functions.
 
-**---**
+---
 
-**### Profile**
+### Profile
+**Image**
 
-**\*\*Image\*\***
-
-\`profile.png\`
+`profile.png`
 
 Purpose
 
 Provides users with access to their profile and account information.
 
-**---**
+---
 
-**# Outcome**
-
+# Outcome
 The project established an IoT-based monitoring system that connects field-level sensing hardware with a centralized web platform for monitoring TDS levels across 24 pumping stations of Hagonoy Water District.
 
 The system provides a centralized environment for monitoring information, alerts, notifications, reports, forecasting, and user management.
@@ -478,10 +454,9 @@ The hardware implementation connects the DFRobot TDS Sensor and DS18B20 temperat
 
 The system serves as a monitoring aid and does not replace laboratory-based water quality testing.
 
-**---**
+---
 
-**# Reflection**
-
+# Reflection
 This project strengthened my understanding of hardware integration within an IoT-based monitoring system.
 
 As the Hardware Developer / Hardware Lead, I gained hands-on experience working with sensors, the ESP32-WROOM-32, communication modules, wiring, and hardware testing.
@@ -490,38 +465,34 @@ It also helped me understand how field-level hardware connects to a larger digit
 
 If I were to continue developing the project, I would explore further hardware deployment and testing, improved sensor reliability, communication reliability, and additional monitoring capabilities.
 
-**---**
+---
 
-**# Assets**
-
-**## Image Directory**
-
+# Assets
+## Image Directory
 /public/projects/Development/TDS Level Monitoring System/
 
-**### Experience Walkthrough**
+### Experience Walkthrough
+- Login.png
 
-\- Login.png
+- Dashboard.png
 
-\- Dashboard.png
+- dashboard 2.png
 
-\- dashboard 2.png
+- alerts.png
 
-\- alerts.png
+- notifications.png
 
-\- notifications.png
+- forecasting.png
 
-\- forecasting.png
+- reports.png
 
-\- reports.png
+- user management.png
 
-\- user management.png
+- profile.png
 
-\- profile.png
+---
 
-**---**
-
-**# External Links**
-
+# External Links
 Figma: [Add Link]
 
 GitHub: [Add Link]
@@ -530,64 +501,62 @@ Live Website: [Add Link]
 
 Prototype: [Add Link]
 
-**---**
+---
 
-**# AI Notes**
+# AI Notes
+## Important Rules
+- Never invent project facts.
 
-**## Important Rules**
+- Never invent user research.
 
-\- Never invent project facts.
+- Never invent business metrics.
 
-\- Never invent user research.
+- Never exaggerate my role.
 
-\- Never invent business metrics.
+- Keep all descriptions factual and concise.
 
-\- Never exaggerate my role.
+- Identify the project as a **Capstone Project**.
 
-\- Keep all descriptions factual and concise.
+- The client/organization is **Hagonoy Water District**.
 
-\- Identify the project as a **Capstone Project**.
+- The system covers **24 pumping stations**.
 
-\- The client/organization is **Hagonoy Water District**.
+- My role was **Hardware Developer / Hardware Lead**.
 
-\- The system covers **24 pumping stations**.
+- My contribution focused on the hardware side of the system.
 
-\- My role was **Hardware Developer / Hardware Lead**.
+- Do not claim that I solely developed the React web dashboard.
 
-\- My contribution focused on the hardware side of the system.
+- Do not claim that I solely implemented Firebase.
 
-\- Do not claim that I solely developed the React web dashboard.
+- Do not attribute the entire software system to me.
 
-\- Do not claim that I solely implemented Firebase.
+- Hardware components include the **ESP32-WROOM-32**, **DFRobot TDS Sensor**, **DS18B20**, and **Air780E**.
 
-\- Do not attribute the entire software system to me.
+- The DFRobot TDS Sensor is connected to ESP32 GPIO 34.
 
-\- Hardware components include the **ESP32-WROOM-32**, **DFRobot TDS Sensor**, **DS18B20**, and **Air780E**.
+- The DS18B20 temperature sensor is connected to GPIO 4.
 
-\- The DFRobot TDS Sensor is connected to ESP32 GPIO 34.
+- The Air780E communication module uses UART2, with RX on GPIO 16 and TX on GPIO 17.
 
-\- The DS18B20 temperature sensor is connected to GPIO 4.
+- Firebase is used for centralized data storage and retrieval.
 
-\- The Air780E communication module uses UART2, with RX on GPIO 16 and TX on GPIO 17.
+- React is used for the web dashboard.
 
-\- Firebase is used for centralized data storage and retrieval.
+- The defined TDS threshold is **600 ppm**.
 
-\- React is used for the web dashboard.
+- The system is a monitoring aid and should not be described as a replacement for laboratory water quality testing.
 
-\- The defined TDS threshold is **600 ppm**.
+- Do not invent team size, project duration, metrics, research findings, or other project details that are not provided.
 
-\- The system is a monitoring aid and should not be described as a replacement for laboratory water quality testing.
+- Use the exact image filenames provided in the Assets section.
 
-\- Do not invent team size, project duration, metrics, research findings, or other project details that are not provided.
+- Preserve filename capitalization exactly.
 
-\- Use the exact image filenames provided in the Assets section.
+- Preserve spaces in filenames such as `dashboard 2.png` and `user management.png`.
 
-\- Preserve filename capitalization exactly.
+- The image directory is `/public/projects/Development/TDS Level Monitoring System/`.
 
-\- Preserve spaces in filenames such as `dashboard 2.png` and `user management.png`.
+- Do not invent a cover image because no dedicated cover image was provided.
 
-\- The image directory is `/public/projects/Development/TDS Level Monitoring System/`.
-
-\- Do not invent a cover image because no dedicated cover image was provided.
-
-\- Use the UI/UX Case Study Template as the presentation structure.
+- Use the UI/UX Case Study Template as the presentation structure.

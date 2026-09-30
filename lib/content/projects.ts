@@ -66,8 +66,17 @@ export async function getAllProjects(category?: string): Promise<Project[]> {
     }
   }
 
-  // Sort projects: featured first, then by year descending, then alphabetically by title
+  // Explicit order takes priority; unranked projects keep the existing sort.
   return projects.sort((a, b) => {
+    const orderA = a.metadata.frontmatter.order;
+    const orderB = b.metadata.frontmatter.order;
+
+    if (orderA !== undefined || orderB !== undefined) {
+      if (orderA === undefined) return 1;
+      if (orderB === undefined) return -1;
+      if (orderA !== orderB) return orderA - orderB;
+    }
+
     if (a.metadata.frontmatter.featured && !b.metadata.frontmatter.featured) return -1;
     if (!a.metadata.frontmatter.featured && b.metadata.frontmatter.featured) return 1;
 

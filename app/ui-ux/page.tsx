@@ -11,9 +11,15 @@ export const metadata: Metadata = {
 
 export default async function UiUxPage() {
   const projects = await getProjectsByCategory("ui-ux");
+  const webDevelopmentProjects = projects.filter(
+    (project) => project.metadata.frontmatter.category.toLowerCase() === "web development"
+  );
+  const otherProjects = projects.filter(
+    (project) => project.metadata.frontmatter.category.toLowerCase() !== "web development"
+  );
 
   // Divide projects into Web and Mobile App collections
-  const webProjects = projects.filter((project) => {
+  const webProjects = otherProjects.filter((project) => {
     const platform = (project.metadata.frontmatter.platform || "").toLowerCase();
     const type = (project.metadata.frontmatter.projectType || "").toLowerCase();
     return (
@@ -25,7 +31,10 @@ export default async function UiUxPage() {
   });
 
   const mobileProjects = projects.filter((project) => {
-    return !webProjects.some((w) => w.metadata.slug === project.metadata.slug);
+    return (
+      project.metadata.frontmatter.category.toLowerCase() !== "web development" &&
+      !webProjects.some((w) => w.metadata.slug === project.metadata.slug)
+    );
   });
 
   return (
@@ -35,7 +44,6 @@ export default async function UiUxPage() {
       category="DESIGN & ENGINEERING"
     >
       <div className="space-y-20 md:space-y-28">
-        {/* WEB DESIGN SECTION */}
         <section className="space-y-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-border pb-5">
             <div>
@@ -43,11 +51,34 @@ export default async function UiUxPage() {
                 01 / CATEGORY
               </span>
               <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-normal text-foreground">
+                Web Development
+              </h2>
+            </div>
+            <p className="text-xs tracking-widest text-muted uppercase font-light">
+              {webDevelopmentProjects.length} Showcase Projects
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+            {webDevelopmentProjects.map((project) => (
+              <ProjectCard key={project.metadata.slug} project={project} />
+            ))}
+          </div>
+        </section>
+
+        {/* WEB DESIGN SECTION */}
+        <section className="space-y-8">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-border pb-5">
+            <div>
+              <span className="text-[10px] font-semibold tracking-[0.25em] uppercase text-gold block mb-1">
+                02 / CATEGORY
+              </span>
+              <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-normal text-foreground">
                 Web Design & Applications
               </h2>
             </div>
             <p className="text-xs tracking-widest text-muted uppercase font-light">
-              2 Showcase Projects
+              {webProjects.length} Showcase Projects
             </p>
           </div>
 
@@ -64,14 +95,14 @@ export default async function UiUxPage() {
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-border pb-5">
             <div>
               <span className="text-[10px] font-semibold tracking-[0.25em] uppercase text-gold block mb-1">
-                02 / CATEGORY
+                03 / CATEGORY
               </span>
               <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-normal text-foreground">
                 Mobile Application Design
               </h2>
             </div>
             <p className="text-xs tracking-widest text-muted uppercase font-light">
-              3 Showcase Projects
+              {mobileProjects.length} Showcase Projects
             </p>
           </div>
 
