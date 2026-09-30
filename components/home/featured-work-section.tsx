@@ -94,7 +94,11 @@ export default function FeaturedWorkSection() {
                     fill
                     priority
                     sizes="(max-width: 1024px) 100vw, 680px"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    className={
+                      mainProject.id === "tds-level-monitoring-system"
+                        ? "object-contain"
+                        : "object-cover transition-transform duration-700 group-hover:scale-105"
+                    }
                   />
                   <div className="absolute top-4 left-4 rounded-full border border-gold/40 bg-background/90 backdrop-blur-md px-3.5 py-1 text-[10px] font-semibold tracking-[0.3em] uppercase text-gold">
                     ISSUE N° {mainProject.number}

@@ -41,6 +41,7 @@ export default function ProjectPreview({
   const isWeb =
     platform.toLowerCase().includes("web") ||
     platform.toLowerCase().includes("responsive");
+  const isTdsProject = title === "TDS Level Monitoring System";
 
   const nextSlide = useCallback(() => {
     if (images.length === 0) return;
@@ -111,14 +112,25 @@ export default function ProjectPreview({
         </div>
 
         {/* Browser Screen Content Area */}
-        <div className="relative aspect-[16/10] w-full overflow-hidden bg-border/30">
+        <div
+          className={`relative w-full bg-border/30 ${
+            isTdsProject ? "" : "aspect-[16/10] overflow-hidden"
+          }`}
+        >
           <AnimatePresence mode="wait">
             <motion.img
               key={currentIndex}
               src={safeImageUrl}
               alt={`${title} screenshot ${currentIndex + 1}`}
-              className="h-full w-full object-cover object-top"
-              initial={{ opacity: prefersReducedMotion ? 1 : 0, scale: 1.02 }}
+              className={
+                isTdsProject
+                  ? "block h-auto w-full"
+                  : "h-full w-full object-cover object-top"
+              }
+              initial={{
+                opacity: prefersReducedMotion ? 1 : 0,
+                scale: isTdsProject ? 1 : 1.02,
+              }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: prefersReducedMotion ? 1 : 0 }}
               transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }}
