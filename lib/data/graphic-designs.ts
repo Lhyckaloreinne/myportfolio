@@ -16,7 +16,7 @@ export const MARILAG_ITEMS: GraphicItem[] = [
     category: "Client Work",
     subCategory: "Invitations & Announcements",
     project: "Marilag Bridal Fair",
-    src: "/graphics/01-Client Work/Marilag_Bridal_Fair/Invitation and announcement/Invitation Poster.png",
+    src: "/Graphics/01-Client Work/Marilag_Bridal_Fair/Invitation and announcement/Invitation Poster.png",
     aspectRatio: "portrait",
   },
   {
@@ -25,7 +25,7 @@ export const MARILAG_ITEMS: GraphicItem[] = [
     category: "Client Work",
     subCategory: "Invitations & Announcements",
     project: "Marilag Bridal Fair",
-    src: "/graphics/01-Client Work/Marilag_Bridal_Fair/Invitation and announcement/Grand Food tasting.png",
+    src: "/Graphics/01-Client Work/Marilag_Bridal_Fair/Invitation and announcement/Grand Food tasting.png",
     aspectRatio: "portrait",
   },
   {
@@ -34,7 +34,7 @@ export const MARILAG_ITEMS: GraphicItem[] = [
     category: "Client Work",
     subCategory: "Invitations & Announcements",
     project: "Marilag Bridal Fair",
-    src: "/graphics/01-Client Work/Marilag_Bridal_Fair/Invitation and announcement/JN.png",
+    src: "/Graphics/01-Client Work/Marilag_Bridal_Fair/Invitation and announcement/JN.png",
     aspectRatio: "portrait",
   },
 
@@ -45,7 +45,7 @@ export const MARILAG_ITEMS: GraphicItem[] = [
     category: "Client Work",
     subCategory: "Promo Posters",
     project: "Marilag Bridal Fair",
-    src: "/graphics/01-Client Work/Marilag_Bridal_Fair/Promo Poster/JN Styling.png",
+    src: "/Graphics/01-Client Work/Marilag_Bridal_Fair/Promo Poster/JN Styling.png",
     aspectRatio: "portrait",
   },
   
@@ -55,7 +55,7 @@ export const MARILAG_ITEMS: GraphicItem[] = [
     category: "Client Work",
     subCategory: "Promo Posters",
     project: "Marilag Bridal Fair",
-    src: "/graphics/01-Client Work/Marilag_Bridal_Fair/Promo Poster/Route 95 Diner.png",
+    src: "/Graphics/01-Client Work/Marilag_Bridal_Fair/Promo Poster/Route 95 Diner.png",
     aspectRatio: "portrait",
   },
  
@@ -67,7 +67,7 @@ export const MARILAG_ITEMS: GraphicItem[] = [
     category: "Client Work",
     subCategory: "Designers Solo",
     project: "Marilag Bridal Fair",
-    src: "/graphics/01-Client Work/Marilag_Bridal_Fair/Designers Solo Photos/GROUP.png",
+    src: "/Graphics/01-Client Work/Marilag_Bridal_Fair/Designers Solo Photos/GROUP.png",
     aspectRatio: "portrait",
   },
   {
@@ -76,7 +76,7 @@ export const MARILAG_ITEMS: GraphicItem[] = [
     category: "Client Work",
     subCategory: "Designers Solo",
     project: "Marilag Bridal Fair",
-    src: "/graphics/01-Client Work/Marilag_Bridal_Fair/Designers Solo Photos/Atty.png",
+    src: "/Graphics/01-Client Work/Marilag_Bridal_Fair/Designers Solo Photos/Atty.png",
     aspectRatio: "portrait",
   },
   {
@@ -85,7 +85,7 @@ export const MARILAG_ITEMS: GraphicItem[] = [
     category: "Client Work",
     subCategory: "Designers Solo",
     project: "Marilag Bridal Fair",
-    src: "/graphics/01-Client Work/Marilag_Bridal_Fair/Designers Solo Photos/Jaziz.png",
+    src: "/Graphics/01-Client Work/Marilag_Bridal_Fair/Designers Solo Photos/Jaziz.png",
     aspectRatio: "portrait",
   },
   {
@@ -94,7 +94,7 @@ export const MARILAG_ITEMS: GraphicItem[] = [
     category: "Client Work",
     subCategory: "Designers Solo",
     project: "Marilag Bridal Fair",
-    src: "/graphics/01-Client Work/Marilag_Bridal_Fair/Designers Solo Photos/Manny.png",
+    src: "/Graphics/01-Client Work/Marilag_Bridal_Fair/Designers Solo Photos/Manny.png",
     aspectRatio: "portrait",
   },
  
@@ -106,7 +106,7 @@ export const BULSU_ITEMS: GraphicItem[] = [
     title: "Invitation — Front",
     category: "Client Work",
     project: "BulSU Sambalaran",
-    src: "/graphics/01-Client Work/BulSU_Sambalaran/Invitation-front.png",
+    src: "/Graphics/01-Client Work/BulSU_Sambalaran/Invitation-front.png",
     aspectRatio: "portrait",
   },
   {
@@ -114,7 +114,7 @@ export const BULSU_ITEMS: GraphicItem[] = [
     title: "Invitation — Back",
     category: "Client Work",
     project: "BulSU Sambalaran",
-    src: "/graphics/01-Client Work/BulSU_Sambalaran/invitation-back.png",
+    src: "/Graphics/01-Client Work/BulSU_Sambalaran/invitation-back.png",
     aspectRatio: "portrait",
   },
   {
@@ -122,7 +122,7 @@ export const BULSU_ITEMS: GraphicItem[] = [
     title: "Program Flow — Day 1",
     category: "Client Work",
     project: "BulSU Sambalaran",
-    src: "/graphics/01-Client Work/BulSU_Sambalaran/program-flow1.png",
+    src: "/Graphics/01-Client Work/BulSU_Sambalaran/program-flow1.png",
     aspectRatio: "portrait",
   },
   {
@@ -130,7 +130,7 @@ export const BULSU_ITEMS: GraphicItem[] = [
     title: "Program Flow — Day 2",
     category: "Client Work",
     project: "BulSU Sambalaran",
-    src: "/graphics/01-Client Work/BulSU_Sambalaran/program-flow2.png",
+    src: "/Graphics/01-Client Work/BulSU_Sambalaran/program-flow2.png",
     aspectRatio: "portrait",
   },
 ];
@@ -142,7 +142,7 @@ export const BRANDING_ITEMS: GraphicItem[] = [
     category: "Branding",
     subCategory: "Logo Design",
     project: "CNST Company",
-    src: "/graphics/02-Branding/Logo_Design/CNST_Company.png",
+    src: "/Graphics/02-Branding/Logo_Design/CNST_Company.png",
     aspectRatio: "square",
   },
 ];
@@ -154,7 +154,7 @@ export const MARKETING_ITEMS: GraphicItem[] = [
     category: "Marketing Collateral",
     subCategory: "Product Catalog",
     project: "Product Catalog",
-    src: "/graphics/03-Marketing_Collateral/Product_Catalog/PC 1.png",
+    src: "/Graphics/03-Marketing_Collateral/Product_Catalog/PC 1.png",
     aspectRatio: "catalog",
   },
   {
@@ -163,7 +163,7 @@ export const MARKETING_ITEMS: GraphicItem[] = [
     category: "Marketing Collateral",
     subCategory: "Product Catalog",
     project: "Product Catalog",
-    src: "/graphics/03-Marketing_Collateral/Product_Catalog/PC 2.png",
+    src: "/Graphics/03-Marketing_Collateral/Product_Catalog/PC 2.png",
     aspectRatio: "catalog",
   },
   {
@@ -172,7 +172,7 @@ export const MARKETING_ITEMS: GraphicItem[] = [
     category: "Marketing Collateral",
     subCategory: "Product Catalog",
     project: "Product Catalog",
-    src: "/graphics/03-Marketing_Collateral/Product_Catalog/PC 3.png",
+    src: "/Graphics/03-Marketing_Collateral/Product_Catalog/PC 3.png",
     aspectRatio: "catalog",
   },
 ];
@@ -184,7 +184,7 @@ export const ORGANIZATIONAL_ITEMS: GraphicItem[] = [
     category: "Organizational Work",
     subCategory: "Pubmats",
     project: "BulSU Organization",
-    src: "/graphics/04-Organizational_Work/Pubmats/GrandParents_Day.png",
+    src: "/Graphics/04-Organizational_Work/Pubmats/GrandParents_Day.png",
     aspectRatio: "square",
   },
   {
@@ -193,7 +193,7 @@ export const ORGANIZATIONAL_ITEMS: GraphicItem[] = [
     category: "Organizational Work",
     subCategory: "Posters",
     project: "BulSU Organization",
-    src: "/graphics/04-Organizational_Work/Pubmats/POSTER 1.png",
+    src: "/Graphics/04-Organizational_Work/Pubmats/POSTER 1.png",
     aspectRatio: "portrait",
   },
   {
@@ -202,7 +202,7 @@ export const ORGANIZATIONAL_ITEMS: GraphicItem[] = [
     category: "Organizational Work",
     subCategory: "Posters",
     project: "BulSU Organization",
-    src: "/graphics/04-Organizational_Work/Pubmats/POSTER 2.png",
+    src: "/Graphics/04-Organizational_Work/Pubmats/POSTER 2.png",
     aspectRatio: "portrait",
   },
   {
@@ -211,7 +211,7 @@ export const ORGANIZATIONAL_ITEMS: GraphicItem[] = [
     category: "Organizational Work",
     subCategory: "Lanyards",
     project: "BulSU Organization",
-    src: "/graphics/04-Organizational_Work/Pubmats/Lanyard1.png",
+    src: "/Graphics/04-Organizational_Work/Pubmats/Lanyard1.png",
     aspectRatio: "square",
   },
   {
@@ -220,7 +220,7 @@ export const ORGANIZATIONAL_ITEMS: GraphicItem[] = [
     category: "Organizational Work",
     subCategory: "Lanyards",
     project: "BulSU Organization",
-    src: "/graphics/04-Organizational_Work/Pubmats/Lanyard2.png",
+    src: "/Graphics/04-Organizational_Work/Pubmats/Lanyard2.png",
     aspectRatio: "square",
   },
 ];
