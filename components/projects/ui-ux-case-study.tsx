@@ -49,7 +49,7 @@ export default function UiUxCaseStudy({ project }: UiUxCaseStudyProps) {
           </h1>
 
           {metadata.summary && (
-            <p className="max-w-3xl text-base sm:text-lg md:text-xl leading-relaxed text-muted font-light">
+            <p className="max-w-5xl text-base sm:text-lg md:text-xl leading-relaxed text-muted font-light text-justify">
               {metadata.summary}
             </p>
           )}
@@ -163,7 +163,7 @@ export default function UiUxCaseStudy({ project }: UiUxCaseStudyProps) {
             <h2 className="font-serif text-2xl sm:text-3xl font-normal text-foreground">
               Project Background
             </h2>
-            <div className="max-w-3xl space-y-4 text-sm sm:text-base text-muted font-light leading-relaxed">
+            <div className="max-w-5xl space-y-4 text-sm sm:text-base text-muted font-light leading-relaxed text-justify">
               {caseStudyData.overview && <p>{caseStudyData.overview}</p>}
               {caseStudyData.businessContext && <p>{caseStudyData.businessContext}</p>}
             </div>
@@ -179,7 +179,7 @@ export default function UiUxCaseStudy({ project }: UiUxCaseStudyProps) {
             <h2 className="font-serif text-2xl sm:text-3xl font-normal text-foreground">
               Problem Statement
             </h2>
-            <p className="max-w-3xl text-sm sm:text-base text-muted font-light leading-relaxed whitespace-pre-line">
+            <p className="max-w-5xl text-sm sm:text-base text-muted font-light leading-relaxed whitespace-pre-line text-justify">
               {caseStudyData.challenge}
             </p>
           </section>
@@ -442,7 +442,7 @@ export default function UiUxCaseStudy({ project }: UiUxCaseStudyProps) {
             <h2 className="font-serif text-2xl sm:text-3xl font-normal text-foreground">
               Project Outcome
             </h2>
-            <p className="max-w-3xl text-sm sm:text-base text-muted font-light leading-relaxed whitespace-pre-line">
+            <p className="max-w-5xl text-sm sm:text-base text-muted font-light leading-relaxed whitespace-pre-line text-justify">
               {caseStudyData.outcome}
             </p>
           </section>
@@ -457,7 +457,7 @@ export default function UiUxCaseStudy({ project }: UiUxCaseStudyProps) {
             <h2 className="font-serif text-2xl sm:text-3xl font-normal text-foreground">
               Personal Reflection
             </h2>
-            <p className="max-w-3xl text-sm sm:text-base text-muted font-light leading-relaxed whitespace-pre-line">
+            <p className="max-w-5xl text-sm sm:text-base text-muted font-light leading-relaxed whitespace-pre-line text-justify">
               {caseStudyData.reflection}
             </p>
           </section>

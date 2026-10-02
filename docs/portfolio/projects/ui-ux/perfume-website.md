@@ -1,11 +1,12 @@
 ---
 order: 2
 previews:
+      - "/projects/Development/Perfume Website/hero.jpg"
       - "/projects/Development/Perfume Website/about.png"
       - "/projects/Development/Perfume Website/contact_us.png"
       - "/projects/Development/Perfume Website/featured_fragrances.png"
       - "/projects/Development/Perfume Website/Footer.png"
-      - "/projects/Development/Perfume Website/hero.png"
+      
 ---
 
 # Scenty Metadata
@@ -304,7 +305,7 @@ Introduce the fragrance business and communicate its story while giving users ad
 ### Hero Section
 **Image**
 
-`hero.png`
+`hero.jpg`
 
 Purpose
 
@@ -380,7 +381,7 @@ If I were to continue developing the project, I would explore more detailed prod
 /public/projects/Development/Perfume Website/
 
 ### Experience Walkthrough
-- hero.png
+- hero.jpg
 
 - about.png
 

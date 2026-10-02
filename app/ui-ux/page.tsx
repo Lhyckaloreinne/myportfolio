@@ -39,7 +39,7 @@ export default async function UiUxPage() {
 
   return (
     <CategoryPage
-      title="UI/UX Design & Front-End Development"
+      title="UI/UX Design & Web Development"
       subtitle="Crafting intuitive user journeys, wireframes, prototypes, and bringing designs to life through clean, responsive front-end development."
       category="DESIGN & ENGINEERING"
     >
