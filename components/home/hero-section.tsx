@@ -63,12 +63,14 @@ export default function HeroSection() {
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" /> 
               </Link> 
  
-              <Link 
-                href="/#about" 
-                className="inline-flex items-center justify-center rounded-full border border-gold/70 bg-transparent px-8 py-4 text-xs font-semibold uppercase tracking-[0.3em] text-foreground transition-all duration-300 hover:border-foreground hover:bg-surface active:scale-95" 
-              > 
-                Philosophy 
-              </Link> 
+              <a
+              href="/resume/Lhycka-Loreinne-Sulit-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-gold/70 bg-transparent px-8 py-4 text-xs font-semibold uppercase tracking-[0.3em] text-foreground transition-all duration-300 hover:border-foreground hover:bg-surface active:scale-95"
+            >
+              View Resume
+            </a>
             </div> 
           </motion.div> 
  
