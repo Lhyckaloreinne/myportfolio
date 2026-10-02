@@ -8,28 +8,28 @@ import { SiBehance, SiGithub } from "react-icons/si";
 const contactLinks = [
   {
     label: "EMAIL DIRECT",
-    value: "hello@example.com",
-    href: "mailto:hello@example.com",
+    value: "lhyckaloreinnesulit@gmail.com",
+    href: "mailto:lhyckaloreinnesulit@gmail.com",
     icon: Mail,
   },
   {
     label: "LINKEDIN PROFILE",
-    value: "linkedin.com/in/lhyckaloreinne",
+    value: "www.linkedin.com/in/lhycka-loreinne-sulit",
     href: "https://www.linkedin.com/",
     icon: Link2,
   },
   {
     label: "GITHUB REPOSITORY",
-    value: "github.com/lhyckaloreinne",
+    value: "https://github.com/Lhyckaloreinne",
     href: "https://github.com/",
     icon: SiGithub,
   },
-  {
-    label: "BEHANCE PORTFOLIO",
-    value: "behance.net/lhyckaloreinne",
-    href: "https://www.behance.net/",
-    icon: SiBehance,
-  },
+  // {
+  //   label: "BEHANCE PORTFOLIO",
+  //   value: "behance.net/lhyckaloreinne",
+  //   href: "https://www.behance.net/",
+  //   icon: SiBehance,
+  // },
 ];
 
 export default function ContactSection() {
