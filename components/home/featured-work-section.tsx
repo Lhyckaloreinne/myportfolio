@@ -55,7 +55,7 @@ const projects: FeaturedProject[] = [
     description:
       "A simple fragrance e-commerce website focused on product discovery, featured perfumes, brand presentation, and a clean browsing experience.",
     href: "/ui-ux/perfume-website",
-    image: "/projects/Development/Perfume Website/hero.png",
+    image: "/projects/Development/Perfume Website/hero.jpg",
     imageAlt: "Scenty Perfume Website",
     ctaText: "View Project Case Study",
   },
